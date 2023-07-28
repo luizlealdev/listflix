@@ -1,5 +1,5 @@
 import PlayIcon from "../../assets/img/play.png";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { useState } from "react";
 
 //Styles
@@ -10,10 +10,14 @@ function Card({ id, title, image, year, type }) {
       .toLowerCase()
       .replace(/\s/g, "-")}/${id}`;
 
+   const handleClick = () => {
+      window.location.href = linkTitle;
+   };
+
    return (
       <figure className={styles.card}>
          <div className={styles.cardImgBox}>
-            <Link to={linkTitle}>
+            <div to={linkTitle} onClick={handleClick}>
                <img
                   className={styles.cardImg}
                   src={
@@ -25,12 +29,16 @@ function Card({ id, title, image, year, type }) {
                />
                <img className={styles.playIcon} src={PlayIcon} alt="Play" />
                <span className={styles.cardYear}>{year}</span>
-            </Link>
+            </div>
          </div>
          <figcaption className={styles.cardTitle}>
-            <Link className={styles.cardTitleLink} to={linkTitle}>
+            <p
+               className={styles.cardTitleLink}
+               to={linkTitle}
+               onClick={handleClick}
+            >
                {title}
-            </Link>
+            </p>
          </figcaption>
       </figure>
    );

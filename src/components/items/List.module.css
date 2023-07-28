@@ -5,6 +5,19 @@
    display: flex;
    justify-content: space-between;
 }
+.listHeadingTitle {
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+   vertical-align: middle;
+}
+.listHeadingFag {
+   width: 7px;
+   height: 100%;
+   background: var(--main-color);
+   border-radius: 10px;
+   display: flex;
+}
 .pathLink {
    display: flex;
    align-items: center;

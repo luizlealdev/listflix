@@ -10,7 +10,7 @@ import Card from "./Card";
 //Styles
 import styles from "./List.module.css";
 
-function List({ title, fetchUrl, quantityItems,textLink, linkPath }) {
+function List({ title, fetchUrl, quantityItems, textLink, linkPath }) {
    const [listData, setListData] = useState({});
    const [isLoading, setIsLoading] = useState(true);
 
@@ -35,7 +35,10 @@ function List({ title, fetchUrl, quantityItems,textLink, linkPath }) {
    return (
       <section className={styles.list}>
          <div className={styles.listHeading}>
-            <h2 className={styles.listTitle}>{title}</h2>
+            <div className={styles.listHeadingTitle}>
+               <span className={styles.listHeadingFag}></span>
+               <h2 className={styles.listTitle}>{title}</h2>
+            </div>
             {textLink && (
                <Link to={linkPath} className={styles.pathLink}>
                   <HiPlus />
@@ -56,7 +59,9 @@ function List({ title, fetchUrl, quantityItems,textLink, linkPath }) {
                         year={
                            item.release_date
                               ? item.release_date.slice(0, 4)
-                              : item.first_air_date.slice(0, 4)
+                              : item.first_air_date
+                              ? item.first_air_date.slice(0, 4)
+                              : "N/A"
                         }
                         image={item.poster_path}
                         type={item.release_date ? "movie" : "serie"}

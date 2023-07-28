@@ -1,0 +1,55 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-shadow: border-box;
+   text-size-adjust: none !important;
+   -webkit-text-size-adjust: none;
+}
+
+:root {
+   /* Colors */
+   --main-color: #e50914;
+   --text-color: #fff;
+   --text-secundary-color: #dadada;
+   --bg-color: #221f1f;
+   --light-bg-color: #252525;
+
+   /* Text sizes */
+   --text-small: 0.8rem;
+   --text-medium: 1.02rem;
+   --text-large: 1.2rem;
+   --text-ultra: 1.8rem;
+}
+
+body,
+html {
+   font-family: "Poppins", sans-serif;
+   background-color: var(--bg-color);
+   color: var(--text-color);
+}
+
+a {
+   text-decoration: none;
+   color: var(--text-color);
+}
+
+ol,
+ul {
+   list-style: none;
+}
+
+input,
+textarea {
+   color: var(--text-color);
+   font-size: var(--text-medium);
+}
+
+strong {
+   font-weight: 500;
+   align-items: center;
+   vertical-align: middle;
+   display: flex;
+}
+strong svg {
+   margin-right: 4px;
+}

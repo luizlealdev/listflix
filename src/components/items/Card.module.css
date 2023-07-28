@@ -1,0 +1,58 @@
+.card {
+   width: 100%;
+   height: auto;
+   max-height: 200px;
+}
+.cardImgBox {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   object-fit: cover;
+   position: relative;
+   border-radius: 10px;
+}
+.cardImg {
+   width: 100%;
+   height: 100%;
+   transition: 0.25s ease;
+}
+.cardImg:hover {
+   transform: scale(1.3);
+   filter: blur(4px) brightness(40%);
+}
+.cardImg:hover ~ .cardYear {
+   transform: translateX(50px);
+}
+.cardImg:hover ~ .playIcon {
+   opacity: 1;
+}
+.cardYear {
+   position: absolute;
+   bottom: 6px;
+   right: 5px;
+   padding: 1.5px 3px;
+   border-radius: 3px;
+   font-size: var(--text-small);
+   background-color: rgba(0, 0, 0, 0.55);
+   transition: 0.25s ease;
+}
+.cardTitle {
+   width: 100%;
+   margin-top: 2px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.cardTitleLink:hover {
+   color: var(--text-secundary-color);
+}
+.playIcon {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 60px;
+   opacity: 0;
+   transition: 0.35s ease;
+   pointer-events: none;
+}

@@ -1,0 +1,8 @@
+.logo {
+   font-size: var(--text-ultra);
+   font-weight: 700;
+   color: #fff;
+}
+.logo span {
+   color: var(--main-color);
+}

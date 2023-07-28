@@ -1,0 +1,25 @@
+.list {
+   margin: 1.8rem 0 5.5rem 0;
+}
+.listHeading {
+   display: flex;
+   justify-content: space-between;
+}
+.pathLink {
+   display: flex;
+   align-items: center;
+   vertical-align: middle;
+   color: var(--text-color);
+   font-weight: 600;
+   transition: 0.2s ease;
+}
+.pathLink:hover {
+   color: var(--main-color);
+}
+.listGrid {
+   margin-top: 1rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+   row-gap: 50px;
+   column-gap: 13px !important;
+}

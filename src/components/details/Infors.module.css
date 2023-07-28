@@ -1,0 +1,31 @@
+.inforsSection {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   vertical-align: middle;
+   margin-bottom: 0.5rem;
+   font-size: var(--text-medium) !important;
+}
+.inforsSection strong,
+.overview strong {
+   align-items: center;
+   vertical-align: middle;
+   display: flex;
+}
+.inforsSection strong svg,
+.overview strong svg {
+   margin-right: 4px;
+}
+.inforsSection span {
+   font-size: var(--text-medium);
+   margin-left: 6px;
+}
+.inforsSection span,
+.overview span {
+   color: var(--text-secundary-color);
+}
+.flexInfors {
+   display: flex;
+   flex-direction: row;
+   gap: 12px;
+}

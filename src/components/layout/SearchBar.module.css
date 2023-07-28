@@ -1,0 +1,22 @@
+.searchBar {
+   padding: 0.4rem 0.5rem;
+   background: #343434;
+   justify-content: space-between;
+   /* max-width: 200px; */
+   display: flex;
+   align-items: center;
+   vertical-align: middle;
+   border-radius: 30px;
+}
+.searchBar svg {
+   margin-right: 4px;
+}
+.searchBarInput {
+   border: none;
+   background: none;
+   outline: none;
+   width: 100%;
+}
+.searchBarInput::placeholder {
+   color: #7a7a7a;
+}

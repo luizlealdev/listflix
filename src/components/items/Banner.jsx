@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./Banner.module.css";
 
 //Skeleton loading
-import {BannerSkeleton} from "./BannerSkeleton";
+import { BannerSkeleton } from "./BannerSkeleton";
 
 //Icon
 import { FaStar } from "react-icons/fa";
@@ -45,7 +45,7 @@ function Banner({
    return (
       <>
          {fetchUrl !== undefined && isLoading && <BannerSkeleton />}
-         {!isLoading && (
+         {title && (
             <figure className={styles.bannerContainer}>
                <img
                   className={styles.bannerImg}

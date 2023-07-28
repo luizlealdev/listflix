@@ -13,7 +13,7 @@ function Card({ id, title, image, year, type }) {
    return (
       <figure className={styles.card}>
          <div className={styles.cardImgBox}>
-            <Link to={linkTitle} onClick={handleClick}>
+            <Link to={linkTitle}>
                <img
                   className={styles.cardImg}
                   src={
@@ -31,7 +31,6 @@ function Card({ id, title, image, year, type }) {
             <Link
                className={styles.cardTitleLink}
                to={linkTitle}
-               onClick={handleClick}
             >
                {title}
             </Link>

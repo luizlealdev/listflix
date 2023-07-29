@@ -13,7 +13,7 @@ function Card({ id, title, image, year, type }) {
    return (
       <figure className={styles.card}>
          <div className={styles.cardImgBox}>
-            <Link to={linkTitle} reloadDocument={true}>
+            <Link to={linkTitle} reloadDocument={false}>
                <img
                   className={styles.cardImg}
                   src={
@@ -31,7 +31,7 @@ function Card({ id, title, image, year, type }) {
             <Link
                className={styles.cardTitleLink}
                to={linkTitle}
-               reloadDocument={true}
+               reloadDocument={false}
             >
                {title}
             </Link>

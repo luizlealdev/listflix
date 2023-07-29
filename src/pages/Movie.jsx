@@ -71,7 +71,7 @@ function Movie() {
          )}
          <Cast id={id} />
          <List
-            title="Similar content"
+            title="Similar Content"
             fetchUrl={`https://api.themoviedb.org/3/movie/${id}/similar`}
             quantityItems={15}
          />

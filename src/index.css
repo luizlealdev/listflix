@@ -6,6 +6,16 @@
    -webkit-text-size-adjust: none;
 }
 
+html::-webkit-scrollbar {
+   width: 0.5rem;
+   background: #313131;
+}
+
+html::-webkit-scrollbar-thumb {
+   background: var(--main-color);
+   border-radius: 10px;
+}
+
 :root {
    /* Colors */
    --main-color: #e50914;

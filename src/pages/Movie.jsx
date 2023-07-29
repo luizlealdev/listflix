@@ -74,6 +74,7 @@ function Movie() {
             title="Similar Content"
             fetchUrl={`https://api.themoviedb.org/3/movie/${id}/similar`}
             quantityItems={15}
+            reloadDocument={true}
          />
       </div>
    );

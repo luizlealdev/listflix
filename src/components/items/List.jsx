@@ -10,7 +10,14 @@ import Card from "./Card";
 //Styles
 import styles from "./List.module.css";
 
-function List({ title, fetchUrl, quantityItems, textLink, linkPath }) {
+function List({
+   title,
+   fetchUrl,
+   quantityItems,
+   textLink,
+   linkPath,
+   reloadDocument,
+}) {
    const [listData, setListData] = useState({});
    const [isLoading, setIsLoading] = useState(true);
 
@@ -64,6 +71,7 @@ function List({ title, fetchUrl, quantityItems, textLink, linkPath }) {
                               : "N/A"
                         }
                         image={item.poster_path}
+                        reloadDocument={reloadDocument}
                         type={item.release_date ? "movie" : "serie"}
                      />
                   ))}

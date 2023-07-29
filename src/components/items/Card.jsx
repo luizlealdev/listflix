@@ -5,7 +5,7 @@ import { useState } from "react";
 //Styles
 import styles from "./Card.module.css";
 
-function Card({ id, title, image, year, type }) {
+function Card({ id, title, image, year, type, reloadDocument }) {
    const linkTitle = `/${type}/${title
       .toLowerCase()
       .replace(/\s/g, "-")}/${id}`;
@@ -13,7 +13,7 @@ function Card({ id, title, image, year, type }) {
    return (
       <figure className={styles.card}>
          <div className={styles.cardImgBox}>
-            <Link to={linkTitle} reloadDocument={false}>
+            <Link to={linkTitle} reloadDocument={reloadDocument}>
                <img
                   className={styles.cardImg}
                   src={
@@ -31,7 +31,7 @@ function Card({ id, title, image, year, type }) {
             <Link
                className={styles.cardTitleLink}
                to={linkTitle}
-               reloadDocument={false}
+               reloadDocument={reloadDocument}
             >
                {title}
             </Link>

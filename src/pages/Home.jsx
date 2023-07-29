@@ -12,6 +12,7 @@ function Home() {
             quantityItems={15}
             textLink="View All"
             linkPath="/movies"
+            reloadDocument={false}
          />
          <List
             title="Top Rated Movies"
@@ -19,6 +20,7 @@ function Home() {
             quantityItems={15}
             textLink="View All"
             linkPath="/movies"
+            reloadDocument={false}
          />
       </>
    );

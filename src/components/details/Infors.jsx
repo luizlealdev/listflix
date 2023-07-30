@@ -14,14 +14,18 @@ function Infors({ releaseDate, runTime, genres, overview }) {
                      <FaCalendar />
                      Release Date:
                   </strong>
-                  <span>{releaseDate}</span>
+                  <span>
+                     {releaseDate != null ? releaseDate : "No informations"}
+                  </span>
                </p>
                <p className={styles.inforsSection}>
                   <strong>
                      <FaClock />
                      Time:
                   </strong>
-                  <span>{`${runTime}min`}</span>
+                  <span>
+                     {runTime != 0 ? `${runTime}min` : "No informations"}
+                  </span>
                </p>
             </div>
             <p className={styles.inforsSection}>
@@ -30,11 +34,11 @@ function Infors({ releaseDate, runTime, genres, overview }) {
                   Genres:
                </strong>
                <span>
-                  {genres &&
+                  {genres.length > 0 ? (
                      genres.map(
                         (genre, i) =>
                            `${genre.name}${i !== genres.length - 1 && ", "}`
-                     )}
+                     )) : "No informations"}
                </span>
             </p>
             <p className={styles.overview}>
@@ -42,7 +46,7 @@ function Infors({ releaseDate, runTime, genres, overview }) {
                   <FaMessage />
                   Overview:
                </strong>
-               <span>{overview}</span>
+               <span>{overview != "" ? overview : "No informations"}</span>
             </p>
          </div>
       </article>

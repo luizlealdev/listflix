@@ -77,6 +77,7 @@ function Cast({ id }) {
                      </figcaption>
                   </figure>
                ))}
+               {castData.cast && castData.length <= 0 && <p>There is no information about the cast of this movie </p>}
          </div>
       </section>
    );

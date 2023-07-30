@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CardSkeleton } from "./CardSkeleton";
 //Icon
-import { FaChevronRight} from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 //Components
 import Card from "./Card";
@@ -15,6 +15,7 @@ function List({
    fetchUrl,
    quantityItems,
    textLink,
+   errorMessage,
    linkPath,
    reloadDocument,
 }) {
@@ -75,6 +76,13 @@ function List({
                         type={item.release_date ? "movie" : "serie"}
                      />
                   ))}
+            {listData.results && listData.results.length <= 0 && (
+               <p>
+                  {errorMessage != undefined
+                     ? errorMessage
+                     : "Error displaying items"}
+               </p>
+            )}
          </div>
       </section>
    );

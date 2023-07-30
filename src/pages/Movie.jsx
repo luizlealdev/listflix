@@ -20,7 +20,7 @@ function Movie() {
    const [isLoading, setIsLoading] = useState(true);
 
    let titleName = name[0].toUpperCase() + name.substr(1);
-   titleName = titleName.replace("-", " ")
+   titleName = titleName.replace("-", " ");
    document.title = `${titleName} - ListFlix`;
 
    useEffect(() => {
@@ -71,8 +71,9 @@ function Movie() {
          )}
          <Cast id={id} />
          <List
-            title="Similar Content"
-            fetchUrl={`https://api.themoviedb.org/3/movie/${id}/similar`}
+            title="Recommendations"
+            fetchUrl={`https://api.themoviedb.org/3/movie/${id}/recommendations`}
+            errorMessage="Does not exist recommendations for this movie"
             quantityItems={15}
             reloadDocument={true}
          />

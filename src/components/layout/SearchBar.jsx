@@ -5,6 +5,11 @@ import { FiSearch } from "react-icons/fi";
 import styles from "./SearchBar.module.css";
 
 function SearchBar({ placeholder, action, inputName }) {
+   const submitForm = () => {
+      const searchBar = document.querySelector("form")
+      searchBar.submit();
+   };
+
    return (
       <form
          className={styles.searchBar}
@@ -18,7 +23,7 @@ function SearchBar({ placeholder, action, inputName }) {
             name={inputName}
             id={inputName}
          />
-         <FiSearch />
+         <FiSearch onClick={submitForm} />
       </form>
    );
 }

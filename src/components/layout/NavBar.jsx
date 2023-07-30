@@ -14,7 +14,11 @@ function NavBar() {
       <header className={styles.navBar}>
          <Logo />
          <div className={styles.items}>
-              <SearchBar placeholder="Search for Movie or Series..." />
+            <SearchBar
+               action="/search"
+               placeholder="Search for Movie or Series..."
+               inputName="q"
+            />
             <FaRegBell />
             <img className={styles.userPicture} src={UserPic} alt="User" />
          </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CardSkeleton } from "./CardSkeleton";
 //Icon
-import { HiPlus } from "react-icons/hi";
+import { FaChevronRight} from "react-icons/fa";
 
 //Components
 import Card from "./Card";
@@ -48,8 +48,8 @@ function List({
             </div>
             {textLink && (
                <Link to={linkPath} className={styles.pathLink}>
-                  <HiPlus />
                   {textLink}
+                  <FaChevronRight />
                </Link>
             )}
          </div>

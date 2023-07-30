@@ -29,7 +29,13 @@ function Infors({ releaseDate, runTime, genres, overview }) {
                   <FaRocket />
                   Genres:
                </strong>
-               <span>{genres && genres.map((genre) => `${genre.name}, `)}</span>
+               <span>
+                  {genres &&
+                     genres.map(
+                        (genre, i) =>
+                           `${genre.name}${i !== genres.length - 1 && ", "}`
+                     )}
+               </span>
             </p>
             <p className={styles.overview}>
                <strong>

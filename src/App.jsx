@@ -12,6 +12,7 @@ import Movies from "./pages/Movies";
 import Movie from "./pages/Movie";
 import Series from "./pages/Series";
 import Serie from "./pages/Serie";
+import Search from "./pages/Search";
 
 function App() {
    return (
@@ -26,6 +27,7 @@ function App() {
                   <Route path="/movie/:name/:id" element={<Movie />} />
                   <Route path="/series" element={<Series />} />
                   <Route path="/serie/:name/:id" element={<Serie />} />
+                  <Route path="/search" element={<Search />} />
                </Routes>
             </Container>
          </SkeletonTheme>

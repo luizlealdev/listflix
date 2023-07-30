@@ -81,7 +81,15 @@ function SideBar() {
                </li>
             </ul>
          </nav>
-         <p className={styles.textGuia}>Configurations</p>
+         <div className={styles.textGuia}>Configurations</div>
+         <div className={styles.selectLanguageContainer}>
+            <label htmlFor="selectLanguage">Language:</label>
+            <select className={styles.selectLanguage} id="selectLanguage">
+               <option value="en-US">English-US</option>
+               <option value="es-ES">Espanhol-ES</option>
+               <option value="pt-BR">Português-BR</option>
+            </select>
+         </div>
       </div>
    );
 }

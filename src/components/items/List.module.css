@@ -25,9 +25,13 @@
    color: var(--text-color);
    font-weight: 600;
    transition: 0.2s ease;
+   gap: 4px;
 }
 .pathLink:hover {
    color: var(--main-color);
+}
+.pathLink:hover ~ svg {
+   transform: translateX(-8px);
 }
 .listGrid {
    margin-top: 1rem;

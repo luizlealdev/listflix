@@ -21,7 +21,8 @@
 .navItem {
    margin-bottom: 0.8rem;
 }
-.navLink {
+.navLink,
+.selectLanguageContainer label {
    font-size: var(--text-large);
    display: flex;
    align-items: center;
@@ -35,7 +36,7 @@
    margin-right: 5px;
 }
 .genreItems {
-   margin:3px 0 0 1.5rem;
+   margin: 3px 0 0 1.5rem;
    max-height: 18rem;
    height: 0;
    overflow-y: scroll;
@@ -54,4 +55,19 @@
 }
 .genreMenuIcon.opened {
    transform: rotate(180deg);
+}
+.selectLanguageContainer {
+   margin-top: 0.2rem;
+}
+.selectLanguage {
+   width: 100%;
+   padding: 0.4rem 0.6rem;
+   color: var(--text-color);
+   margin-top: 0.1rem;
+   font-size: 1rem;
+   font-weight: 600;
+   outline: none;
+   background-color: #313131;
+   border:#4a4a4a;
+   border-radius: 8px;
 }

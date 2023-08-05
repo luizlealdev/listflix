@@ -23,7 +23,7 @@ function Card({ id, title, image, year, type, reloadDocument }) {
                   }
                   alt={`${title} Poster`}
                />
-               <img className={styles.playIcon} src={PlayIcon} alt="Play" />
+               <img id="playIcon" className={styles.playIcon} src={PlayIcon} alt="Play" />
                <span className={styles.cardYear}>{year}</span>
             </Link>
          </div>

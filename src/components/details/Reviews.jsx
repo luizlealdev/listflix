@@ -10,7 +10,6 @@ function Reviews({ fetchUrl }) {
    const [reviewsData, setReviewsData] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
    const [reviewsContent, setReviewsContent] = useState([]);
-   const [showAllReview, setShowAllReview] = useState(true);
 
    useEffect(() => {
       fetch(fetchUrl, {
@@ -35,7 +34,9 @@ function Reviews({ fetchUrl }) {
       const reviewContentText = document.getElementById(
          `review-${reviewsContentIndex}`
       );
-      const reviewShowBtn = document.getElementById("reviewShowBtn");
+      const reviewShowBtn = document.getElementById(
+         `reviewShowBtn-${reviewsContentIndex}`
+      );
 
       const showAllAttribute = reviewContentText.getAttribute("showall");
       const showAllState = showAllAttribute === "true";
@@ -52,6 +53,7 @@ function Reviews({ fetchUrl }) {
 
    return (
       <section className={styles.reviewsContainer}>
+         <div></div>
          <h3>Reviews</h3>
          {reviewsData &&
             reviewsData.map((review, i) => (
@@ -92,16 +94,15 @@ function Reviews({ fetchUrl }) {
                            ? `${reviewsContent[i].slice(0, 250)}...`
                            : reviewsContent[i]}
                      </span>
-                     {reviewsContent[i].length >=
-                        300 && (
-                           <span
-                              className={`${styles.reviewShowBtn}`}
-                              id="reviewShowBtn"
-                              onClick={() => handleClick(i)}
-                           >
-                              Show all
-                           </span>
-                        )}
+                     {reviewsContent[i].length >= 300 && (
+                        <span
+                           className={`${styles.reviewShowBtn}`}
+                           id={`reviewShowBtn-${i}`}
+                           onClick={() => handleClick(i)}
+                        >
+                           Show all
+                        </span>
+                     )}
                   </div>
                </div>
             ))}

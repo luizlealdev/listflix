@@ -43,7 +43,7 @@ a {
    color: var(--text-color);
 }
 
-img {
+img:not(#playIcon) {
    background-color: #313131;
 }
 

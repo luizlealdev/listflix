@@ -16,10 +16,15 @@ import styles from "./SideBar.module.css";
 
 function SideBar() {
    const [genreMenuState, setGenreMenuState] = useState(false);
+   const [languageMenuState, setLanguageMenuState] = useState(false);
    const [genreData, setGenreData] = useState({});
 
-   const handleClick = (e) => {
+   const handleGenreMenu = (e) => {
       setGenreMenuState((current) => !current);
+   };
+
+   const handleMenuLanguage = () => {
+      setLanguageMenuState((current) => !current);
    };
 
    useEffect(() => {
@@ -61,7 +66,7 @@ function SideBar() {
                </li>
                <li className={styles.navItem}>
                   <span
-                     onClick={handleClick}
+                     onClick={handleGenreMenu}
                      className={`${styles.navLink} ${
                         genreMenuState ? styles.genreMenuOpened : ""
                      }`}
@@ -92,15 +97,16 @@ function SideBar() {
             <ul className={styles.configItems}>
                <li className={styles.configItem}>
                   <span
+                     onClick={handleMenuLanguage}
                      className={`${styles.configLink} ${
-                        genreMenuState ? styles.languageMenuOpened : ""
+                        languageMenuState ? styles.languageMenuOpened : ""
                      }`}
                   >
                      <FaLanguage />
                      Language
                      <FaChevronDown
                         className={`${styles.languageMenuIcon} ${
-                           genreMenuState ? styles.opened : ""
+                           languageMenuState ? styles.opened : ""
                         }`}
                      />
                   </span>

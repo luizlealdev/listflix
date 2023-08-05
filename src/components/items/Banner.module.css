@@ -1,5 +1,5 @@
 .bannerContainer {
-   min-height: 470px;
+   min-height: 430px;
    margin-top: 0.8rem;
    width: 100%;
    display: flex;
@@ -20,7 +20,7 @@
    max-width: 50%;
 }
 .bannerInfors h1 {
-   font-size: 2.7rem;
+   font-size: 2.5rem;
 }
 .topInfo {
    display: flex;

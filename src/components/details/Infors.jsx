@@ -15,7 +15,7 @@ function Infors({ releaseDate, runTime, genres, overview }) {
                      Release Date:
                   </strong>
                   <span>
-                     {releaseDate != null ? releaseDate : "No informations"}
+                     {releaseDate != null ? releaseDate.replace(/-/g, "/") : "No informations"}
                   </span>
                </p>
                <p className={styles.inforsSection}>

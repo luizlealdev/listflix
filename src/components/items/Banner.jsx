@@ -52,7 +52,7 @@ function Banner({
                   src={
                      imageId != null
                         ? `https://image.tmdb.org/t/p/original${imageId}`
-                        : "https://i.ibb.co/d4F5nGV/no-image.png"
+                        : "https://i.ibb.co/Z1vrqbj/no-image-banner.jpg"
                   }
                   alt={`${title} Banner`}
                />

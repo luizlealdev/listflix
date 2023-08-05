@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { BiSolidMovie } from "react-icons/bi";
-import { FaHouse, FaVideo, FaRocket, FaChevronDown } from "react-icons/fa6";
+import {
+   FaHouse,
+   FaVideo,
+   FaRocket,
+   FaChevronDown,
+   FaLanguage,
+} from "react-icons/fa6";
 
 //Hooks
 import { useState, useEffect } from "react";
@@ -83,12 +89,49 @@ function SideBar() {
          </nav>
          <div className={styles.textGuia}>Configurations</div>
          <div className={styles.selectLanguageContainer}>
-            <label htmlFor="selectLanguage">Language:</label>
-            <select className={styles.selectLanguage} id="selectLanguage">
-               <option value="en-US">English-US</option>
-               <option value="es-ES">Espanhol-ES</option>
-               <option value="pt-BR">Português-BR</option>
-            </select>
+            <ul className={styles.configItems}>
+               <li className={styles.configItem}>
+                  <span
+                     className={`${styles.configLink} ${
+                        genreMenuState ? styles.languageMenuOpened : ""
+                     }`}
+                  >
+                     <FaLanguage />
+                     Language
+                     <FaChevronDown
+                        className={`${styles.languageMenuIcon} ${
+                           genreMenuState ? styles.opened : ""
+                        }`}
+                     />
+                  </span>
+                  <ul className={styles.languageItems}>
+                     <li className={styles.languageItem}>
+                        <img
+                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/44px-Flag_of_the_United_States.svg.png"
+                           alt="United States Flag"
+                           className={styles.languageFlagIcon}
+                        />
+                        English-US
+                     </li>
+                     <li className={styles.languageItem}>
+                        <img
+                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/44px-Flag_of_Brazil.svg.png"
+                           alt="Brazil Flag"
+                           className={styles.languageFlagIcon}
+                        />
+                        Português-BR
+                     </li>
+                     <li className={styles.languageItem}>
+                        <img
+                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/44px-Flag_of_Spain.svg.png"
+                           alt="Spain Flag"
+                           className={styles.languageFlagIcon}
+                        />
+                        Español-ES
+                     </li>
+                  </ul>
+               </li>
+            </ul>
          </div>
       </div>
    );

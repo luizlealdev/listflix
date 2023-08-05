@@ -8,6 +8,7 @@ import styles from "./Movie.module.css";
 import Banner from "../components/items/Banner";
 import Infors from "../components/details/Infors";
 import Cast from "../components/details/Cast";
+import Reviews from "../components/details/Reviews";
 import List from "../components/items/List";
 
 //Skeleton Loading components
@@ -20,7 +21,7 @@ function Movie() {
    const [isLoading, setIsLoading] = useState(true);
 
    let titleName = name[0].toUpperCase() + name.substr(1);
-   titleName = titleName.replace("-", " ");
+   titleName = titleName.replace(/-/g, " ");
    document.title = `${titleName} - ListFlix`;
 
    useEffect(() => {
@@ -70,6 +71,9 @@ function Movie() {
             </>
          )}
          <Cast id={id} />
+         <Reviews
+            fetchUrl={`https://api.themoviedb.org/3/movie/${id}/reviews`}
+         />
          <List
             title="Recommendations"
             fetchUrl={`https://api.themoviedb.org/3/movie/${id}/recommendations`}

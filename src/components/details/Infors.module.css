@@ -3,7 +3,7 @@
    flex-direction: row;
    align-items: center;
    vertical-align: middle;
-   margin-bottom: 0.5rem;
+   margin-bottom:0.5rem;
    font-size: var(--text-medium) !important;
 }
 .inforsSection strong,

@@ -1,12 +1,11 @@
 .CastContainer {
    margin-top: 1rem;
 }
-
 .castGrid {
    margin-top: 1rem;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-   row-gap: 50px;
+   row-gap: 25px;
    column-gap: 10px !important;
 }
 .castCard {

@@ -15,7 +15,9 @@ function Infors({ releaseDate, runTime, genres, overview }) {
                      Release Date:
                   </strong>
                   <span>
-                     {releaseDate != null ? releaseDate.replace(/-/g, "/") : "No informations"}
+                     {releaseDate != null
+                        ? releaseDate.replace(/-/g, "/")
+                        : "No informations"}
                   </span>
                </p>
                <p className={styles.inforsSection}>
@@ -34,11 +36,12 @@ function Infors({ releaseDate, runTime, genres, overview }) {
                   Genres:
                </strong>
                <span>
-                  {genres.length > 0 ? (
-                     genres.map(
-                        (genre, i) =>
-                           `${genre.name}${i !== genres.length - 1 && ", "}`
-                     )) : "No informations"}
+                  {genres.length > 0
+                     ? genres.map(
+                          (genre, i) =>
+                             `${genre.name}${i !== genres.length - 1 ? ", " : ""}`
+                       )
+                     : "No informations"}
                </span>
             </p>
             <p className={styles.overview}>

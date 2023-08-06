@@ -39,11 +39,12 @@
    color: var(--text-secundary-color);
 }
 .reviewAutorVote {
-   padding: 0.09rem 0.2rem;
+   padding: 0.09rem 0;
+   width: 2.6rem;
    border-radius: 8px;
    background: var(--main-color);
    display: flex;
-   display: flex;
+   justify-content: center;
    align-items: center;
    vertical-align: middle;
    color: var(--text-color);
@@ -70,4 +71,9 @@
 }
 .reviewShowBtn:hover {
    color: var(--text-secundary-color);
+}
+.skeletonFlex {
+   display: flex;
+   flex-direction: row;
+   position: relative;
 }

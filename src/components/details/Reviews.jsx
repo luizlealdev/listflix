@@ -1,3 +1,5 @@
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import { useState, useEffect } from "react";
 
 //Icon
@@ -53,8 +55,44 @@ function Reviews({ fetchUrl }) {
 
    return (
       <section className={styles.reviewsContainer}>
-         <div></div>
          <h3>Reviews</h3>
+         {isLoading &&
+            Array(3)
+               .fill(0)
+               .map((_, i) => (
+                  <div key={i}>
+                     <div className={styles.skeletonFlex}>
+                        <Skeleton
+                           circle
+                           style={{
+                              width: "50px",
+                              height: "50px",
+                              alignSelf: "flex-start",
+                           }}
+                        />
+                        <Skeleton
+                           style={{
+                              position: "absolute",
+                              left: "55px",
+                              top: "12px",
+                              width: "45%",
+                           }}
+                        />
+                        <Skeleton
+                           style={{
+                              position: "absolute",
+                              left: "55px",
+                              top: "2.2rem",
+                              height: "10px",
+                              width: "50%",
+                           }}
+                        />
+                     </div>
+                     <div>
+                        <Skeleton count={4} />
+                     </div>
+                  </div>
+               ))}
          {reviewsData &&
             reviewsData.map((review, i) => (
                <div className={styles.review} key={review.id}>
@@ -63,7 +101,7 @@ function Reviews({ fetchUrl }) {
                         className={styles.reviewAutorImg}
                         src={
                            review.author_details.avatar_path != null
-                              ? review.author_details.avatar_path.substring(1)
+                              ? `https://themoviedb.org/t/p/w90_and_h90_face${review.author_details.avatar_path}`
                               : "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
                         }
                         alt={`${review.author} Image`}
@@ -91,7 +129,7 @@ function Reviews({ fetchUrl }) {
                         showall="true"
                      >
                         {reviewsContent[i].length >= 300
-                           ? `${reviewsContent[i].slice(0, 250)}...`
+                           ? `${reviewsContent[i].slice(0, 250).toString()}...`
                            : reviewsContent[i]}
                      </span>
                      {reviewsContent[i].length >= 300 && (

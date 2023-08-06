@@ -94,7 +94,7 @@ function Reviews({ fetchUrl }) {
                   </div>
                ))}
          {reviewsData &&
-            reviewsData.map((review, i) => (
+            reviewsData.slice(0,3).map((review, i) => (
                <div className={styles.review} key={review.id}>
                   <div className={styles.reviewAutorInforsContainer}>
                      <img
@@ -144,6 +144,7 @@ function Reviews({ fetchUrl }) {
                   </div>
                </div>
             ))}
+         {reviewsData.length <= 0 && <p>There is no reviews for this movie</p>}
       </section>
    );
 }

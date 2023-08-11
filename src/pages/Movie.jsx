@@ -8,12 +8,13 @@ import styles from "./Movie.module.css";
 import Banner from "../components/items/Banner";
 import Infors from "../components/details/Infors";
 import Cast from "../components/details/Cast";
-import Reviews from "../components/details/Reviews";
+//import Reviews from "../components/details/Reviews";
 import List from "../components/items/List";
 
 //Skeleton Loading components
 import { BannerSkeleton } from "../components/items/BannerSkeleton";
 import { InforsSkeleton } from "../components/details/InforsSkeleton";
+
 
 function Movie() {
    const { name, id } = useParams();
@@ -55,6 +56,7 @@ function Movie() {
                <Banner
                   imageId={movieData.backdrop_path}
                   title={movieData.title}
+                  overview={movieData.overview}
                   year={movieData.release_date.slice(0, 4)}
                   voteAverage={
                      movieData.vote_average.toString().length > 3
@@ -66,14 +68,12 @@ function Movie() {
                   releaseDate={movieData.release_date}
                   runTime={movieData.runtime}
                   genres={movieData.genres}
-                  overview={movieData.overview}
+                  budget={movieData.budget}
+                  revenue={movieData.revenue}
                />
             </>
          )}
          <Cast id={id} />
-         <Reviews
-            fetchUrl={`https://api.themoviedb.org/3/movie/${id}/reviews`}
-         />
          <List
             title="Recommendations"
             fetchUrl={`https://api.themoviedb.org/3/movie/${id}/recommendations`}

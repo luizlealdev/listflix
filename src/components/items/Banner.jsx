@@ -10,6 +10,7 @@ import { FaStar } from "react-icons/fa";
 function Banner({
    imageId: initialImageId,
    title: initialTitle,
+   overview: initialOverview,
    year: initialYear,
    voteAverage: initialVoteAverage,
    fetchUrl,
@@ -39,6 +40,7 @@ function Banner({
 
    const imageId = bannerData?.backdrop_path || initialImageId;
    const title = bannerData?.title || initialTitle;
+   const overview = bannerData.overview || initialOverview;
    const year = bannerData?.release_date?.slice(0, 4) || initialYear;
    const voteAverage = bannerData?.vote_average || initialVoteAverage;
 
@@ -67,6 +69,11 @@ function Banner({
                      <p>{`(${year})`}</p>
                   </div>
                   <h1>{title}</h1>
+                  <p>
+                     {overview && overview.length >= 200
+                        ? `${overview.slice(0, 200)}...`
+                        : overview}
+                  </p>
                </figcaption>
                <div className={styles.shadow}></div>
             </figure>

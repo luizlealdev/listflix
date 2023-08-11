@@ -20,13 +20,13 @@ html::-webkit-scrollbar-thumb {
    /* Colors */
    --main-color: #e50914;
    --text-color: #fff;
-   --text-secundary-color: #dadada;
+   --text-secundary-color: #bababa;
    --bg-color: #221f1f;
    --light-bg-color: #252525;
 
    /* Text sizes */
    --text-small: 0.8rem;
-   --text-medium: 1.02rem;
+   --text-medium: 1rem;
    --text-large: 1.2rem;
    --text-ultra: 1.8rem;
 }

@@ -15,12 +15,12 @@
 .bannerInfors {
    position: absolute;
    left: 2rem;
-   bottom: 7rem;
+   bottom: 4rem;
    z-index: 6;
-   max-width: 50%;
+   max-width: 80%;
 }
 .bannerInfors h1 {
-   font-size: 2.5rem;
+   font-size: 2.3rem;
 }
 .topInfo {
    display: flex;
@@ -40,22 +40,12 @@
    height: 100%;
    position: absolute;
    z-index: 5;
-   background-image: linear-gradient(90deg, var(--bg-color), transparent);
+   background-image: linear-gradient(
+      90deg,
+      var(--bg-color),
+      rgba(34, 31, 31, 0.8),
+      transparent
+   );
    top: 0;
    left: 0;
-}
-.button {
-   color: var(--text-color);
-   background-color: var(--main-color);
-   border-radius: 8px;
-   border: 1.5px solid #b3050d;
-   padding: 0.6rem 1rem;
-   font-size: var(--text-large);
-   align-items: center;
-   display: flex;
-   vertical-align: middle;
-   margin-top: 1rem;
-}
-.button svg {
-   margin-right: 5px;
 }

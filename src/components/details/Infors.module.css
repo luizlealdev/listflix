@@ -1,31 +1,18 @@
-.inforsSection {
+.grid {
+   margin-top: 0.5rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+   row-gap: 1rem;
+   column-gap: calc(auto + 1rem);
+}
+.section {
    display: flex;
-   flex-direction: row;
-   align-items: center;
-   vertical-align: middle;
-   margin-bottom:0.5rem;
-   font-size: var(--text-medium) !important;
+   flex-direction: column;
 }
-.inforsSection strong,
-.overview strong {
-   align-items: center;
-   vertical-align: middle;
-   display: flex;
-}
-.inforsSection strong svg,
-.overview strong svg {
-   margin-right: 4px;
-}
-.inforsSection span {
-   font-size: var(--text-medium);
-   margin-left: 6px;
-}
-.inforsSection span,
-.overview span {
+.section span {
    color: var(--text-secundary-color);
 }
-.flexInfors {
-   display: flex;
-   flex-direction: row;
-   gap: 12px;
+.title {
+   font-weight: 500;
+   font-size: var(--text-large);
 }

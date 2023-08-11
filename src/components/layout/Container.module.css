@@ -8,32 +8,32 @@
 }
 
 .spacing {
-  width: 90%;
-  margin: 0 auto;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
+   width: 75%;
+   margin: 0 auto;
+   padding-left: 2.5%;
+   padding-right: 2.5%;
 }
 
 @media (max-width: 767px) {
-  .spacing {
-    width: 95%;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
+   .spacing {
+      width: 95%;
+      padding-left: 2%;
+      padding-right: 2%;
+   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .spacing {
-    width: 80%;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+   .spacing {
+      width: 80%;
+      padding-left: 5%;
+      padding-right: 5%;
+   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .spacing {
-    width: 75%;
-    padding-left: 7.5%;
-    padding-right: 7.5%;
-  }
+   .spacing {
+      width: 75%;
+      padding-left: 7.5%;
+      padding-right: 7.5%;
+   }
 }

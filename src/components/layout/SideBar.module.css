@@ -5,8 +5,7 @@
    width: 14rem;
    height: 100vh;
    background-color: var(--light-bg-color);
-   padding: 1.2rem;
-   font-weight: 600;
+   padding: 1.2rem;font-weight: 500; 
    z-index: 5;
 }
 .textGuia {

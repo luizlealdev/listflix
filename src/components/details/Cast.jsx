@@ -4,9 +4,6 @@ import "react-loading-skeleton/dist/skeleton.css";
 //Hooks
 import { useState, useEffect } from "react";
 
-//Icons
-import { FaUsers } from "react-icons/fa6";
-
 //Styles;
 import styles from "./Cast.module.css";
 
@@ -27,17 +24,14 @@ function Cast({ id }) {
          .then((data) => {
             setCastData(data);
             setIsLoading(false);
-            console.log(data.cast[9].profile_path);
+            console.log(data.cast);
          })
          .catch((err) => console.log(err));
    }, []);
 
    return (
       <section className={styles.CastContainer}>
-         <strong>
-            <FaUsers />
-            Cast
-         </strong>
+         <span className={styles.title}>Cast</span>
          <div className={styles.castGrid}>
             {isLoading &&
                Array(10)
@@ -45,7 +39,6 @@ function Cast({ id }) {
                   .map((_, i) => (
                      <div className={styles.skeletonCastCard} key={i}>
                         <Skeleton
-                           circle
                            style={{ width: "60px", height: "60px" }}
                         />
                         <Skeleton
@@ -72,8 +65,11 @@ function Cast({ id }) {
                            alt={`${profile.name} Image`}
                         />
                      </div>
-                     <figcaption className={styles.castCardName}>
-                        {profile.name}
+                     <figcaption className={styles.castInfo}>
+                        <p className={styles.actorName}>{profile.name}</p>
+                        <p className={styles.actorCharacter}>
+                           {profile.character}
+                        </p>
                      </figcaption>
                   </figure>
                ))}

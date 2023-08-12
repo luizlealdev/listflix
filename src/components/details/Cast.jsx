@@ -77,6 +77,7 @@ function Cast({ id }) {
                <p>There is no information about the cast of this movie</p>
             )}
          </div>
+         <span className={styles.shadow}></span>
       </section>
    );
 }

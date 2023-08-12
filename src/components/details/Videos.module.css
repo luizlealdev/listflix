@@ -1,0 +1,78 @@
+.videosContainer {
+   margin-top: 0.8rem;
+   position: relative;
+}
+.title {
+   font-weight: 500;
+   font-size: var(--text-large);
+}
+.videosGrid {
+   display: flex;
+   gap: 5px;
+   overflow-x: scroll;
+   overflow-y: auto;
+   white-space: nowrap;
+   padding: 0.8rem 0;
+}
+.video {
+   max-width: 220px;
+   max-height: 140px;
+}
+.imgBox {
+   width: 220px;
+   height: 120px;
+   overflow: hidden;
+   object-fit: cover;
+   position: relative;
+}
+.imgBox img {
+   width: 100%;
+   position: absolute;
+   transform: translateY(-20px);
+}
+.videoTitle {
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+/* .shadowImg {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: linear-gradient(90deg, rgba(34, 31, 31, 1), transparent);
+} */
+.shadow {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 105%;
+   height: 100%;
+   background-image: linear-gradient(
+      90deg,
+      transparent 70%,
+      var(--bg-color) 100%
+   );
+   pointer-events: none;
+}
+.playIcon {
+   display: flex;
+   height: 45px;
+   width: 45px;
+   border-radius: 30px;
+   align-items: center;
+   vertical-align: middle;
+   justify-content: center;
+   background-color: rgba(0, 0, 0, 0.73);
+   position: absolute;
+   bottom: 8px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 10;
+   transition: 0.2s ease;
+}
+.playIcon:is(:hover, :focus) {
+   background-color: var(--main-color);
+}

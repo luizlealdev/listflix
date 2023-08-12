@@ -1,5 +1,6 @@
 .CastContainer {
    margin-top: 1rem;
+   position: relative;
 }
 .title {
    font-weight: 500;
@@ -44,4 +45,17 @@
 .actorCharacter {
    overflow: hidden;
    text-overflow: ellipsis;
+}
+.shadow {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 105%;
+   height: 100%;
+   background-image: linear-gradient(
+      90deg,
+      transparent 50%,
+      var(--bg-color) 100%
+   );
+   pointer-events: none;
 }

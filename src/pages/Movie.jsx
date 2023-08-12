@@ -7,6 +7,7 @@ import styles from "./Movie.module.css";
 //Components
 import Banner from "../components/items/Banner";
 import Infors from "../components/details/Infors";
+import Videos from "../components/details/Videos";
 import Cast from "../components/details/Cast";
 //import Reviews from "../components/details/Reviews";
 import List from "../components/items/List";
@@ -15,10 +16,9 @@ import List from "../components/items/List";
 import { BannerSkeleton } from "../components/items/BannerSkeleton";
 import { InforsSkeleton } from "../components/details/InforsSkeleton";
 
-
 function Movie() {
    const { name, id } = useParams();
-   const [movieData, setMovieData] = useState({});
+   const [movieData, setMovieData] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
 
    let titleName = name[0].toUpperCase() + name.substr(1);
@@ -74,6 +74,7 @@ function Movie() {
             </>
          )}
          <Cast id={id} />
+         <Videos id={id} />
          <List
             title="Recommendations"
             fetchUrl={`https://api.themoviedb.org/3/movie/${id}/recommendations`}

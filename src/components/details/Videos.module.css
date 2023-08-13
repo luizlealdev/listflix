@@ -71,7 +71,7 @@
    top: 50%;
    transform: translate(-50%, -50%);
    z-index: 10;
-   transition: 0.2s ease;
+   transition: 0.3s ease;
 }
 .playIcon:is(:hover, :focus) {
    background-color: var(--main-color);

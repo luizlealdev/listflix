@@ -49,3 +49,18 @@
    top: 0;
    left: 0;
 }
+
+/*Responsives styles*/
+@media (min-width: 1500px) {
+   .bannerInfors {
+      max-width: 45%;
+   }
+}
+@media (min-width: 960px) and (max-width: 1024px) {
+   .bannerContainer {
+      min-height: 370px;
+   }
+   .bannerImg {
+      height: 340px;
+   }
+}

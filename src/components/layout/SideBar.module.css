@@ -5,7 +5,8 @@
    width: 14rem;
    height: 100vh;
    background-color: var(--light-bg-color);
-   padding: 1.2rem;font-weight: 500; 
+   padding: 1.2rem;
+   font-weight: 500;
    z-index: 5;
 }
 .textGuia {
@@ -75,4 +76,11 @@
    display: flex;
    align-items: center;
    vertical-align: middle;
+}
+
+/*Responsives styles*/
+@media (min-width: 960px) and (max-width: 1024px) {
+   .SideBarContainer {
+      width: 12rem;
+   }
 }

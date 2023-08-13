@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 //icon
 import { FaPlay } from "react-icons/fa6";
+//Components
+import Window from "../layout/Window";
 
 //Styles
 import styles from "./Videos.module.css";
@@ -9,6 +11,8 @@ import styles from "./Videos.module.css";
 function Videos({ id }) {
    const [videosData, setVideosData] = useState({});
    const [isLoading, setIsLoading] = useState(true);
+   const [showWindow, setShowWindow] = useState(false);
+   const [videoInfo, setVideoInfo] = useState({});
 
    useEffect(() => {
       fetch(`https://api.themoviedb.org/3/movie/${id}/videos`, {
@@ -28,31 +32,58 @@ function Videos({ id }) {
          .catch((err) => console.log(err));
    }, []);
 
-   return (
-      <section className={styles.videosContainer}>
-         <span className={styles.title}>Videos</span>
-         <div className={styles.videosGrid}>
-            {videosData.results &&
-               videosData.results.map((video) => (
-                  <figure key={video.id} className={styles.video}>
-                     <div className={styles.imgBox}>
-                        <img
-                           src={`https://i.ytimg.com/vi_webp/${video.key}/hqdefault.webp`}
-                           alt={`${video.name}`}
-                        />
+   const windowState = (title = "N/A", url = "N/A") => {
+      const info = {
+         videoTitle: title,
+         videoUrl: url,
+      };
+      setVideoInfo(info);
+      setShowWindow((current) => !current);
+   };
 
-                        <span className={styles.playIcon}>
-                           <FaPlay />
-                        </span>
-                     </div>
-                     <figcaption className={styles.videoTitle}>
-                        {video.name}
-                     </figcaption>
-                  </figure>
-               ))}
-         </div>
-         <span className={styles.shadow}></span>
-      </section>
+   return (
+      <>
+         <section className={styles.videosContainer}>
+            <span className={styles.title}>Videos</span>
+            <div className={styles.videosGrid}>
+               {videosData.results &&
+                  videosData.results.map((video) => {
+                     {
+                        if (video.site !== "Vimeo") {
+                           return(
+                           <figure key={video.id} className={styles.video}>
+                              <div className={styles.imgBox}>
+                                 <img
+                                    src={`https://i.ytimg.com/vi_webp/${video.key}/hqdefault.webp`}
+                                    alt={`${video.name}`}
+                                 />
+                                 <span
+                                    className={styles.playIcon}
+                                    onClick={() =>
+                                       windowState(video.name, video.key)
+                                    }
+                                 >
+                                    <FaPlay />
+                                 </span>
+                              </div>
+                              <figcaption className={styles.videoTitle}>
+                                 {video.name}
+                              </figcaption>
+                           </figure>)
+                        }
+                     }
+                  })}
+            </div>
+            <span className={styles.shadow}></span>
+         </section>
+         {showWindow && (
+            <Window
+               title={videoInfo.videoTitle}
+               urlId={videoInfo.videoUrl}
+               closeFunc={windowState}
+            />
+         )}
+      </>
    );
 }
 export default Videos;

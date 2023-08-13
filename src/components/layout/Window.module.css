@@ -1,0 +1,46 @@
+.window {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 18rem;
+   width: 50vw;
+   background: var(--bg-color);
+   border: 2.5px solid var(--light-bg-color);
+   z-index: 20;
+   border-radius: 8px;
+   padding: 0.6rem 1rem;
+}
+.heading {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+.title {
+   max-width: 90%;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis-word;
+}
+.closeIcon {
+   font-size: 1.2rem;
+   transition: all 0.3s ease;
+}
+.closeIcon:hover {
+   color: var(--main-color);
+}
+.overlay {
+   z-index: 19;
+   background-color: rgba(0, 0, 0, 0.7);
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   top: 0;
+   left: 0;
+}
+.player {
+   background-color: #313131;
+   width: 100%;
+   height: 90% !important;
+   margin-top: 0.2rem;
+}

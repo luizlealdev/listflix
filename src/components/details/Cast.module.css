@@ -2,6 +2,20 @@
    margin-top: 1rem;
    position: relative;
 }
+.heading {
+   display: flex;
+   justify-content: space-between;
+   vertical-align: middle;
+}
+.scrollButtons {
+   display: flex;
+   gap: 5px;
+}
+.scrollButtons svg {
+   font-size: 1.2rem;
+   color: var(--main-color);
+   cursor: pointer;
+}
 .title {
    font-weight: 500;
    font-size: var(--text-large);
@@ -46,7 +60,7 @@
    overflow: hidden;
    text-overflow: ellipsis;
 }
-.shadow {
+/* .shadow {
    position: absolute;
    top: 0;
    left: 0;
@@ -59,3 +73,4 @@
    );
    pointer-events: none;
 }
+ */

@@ -3,6 +3,10 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 //Hooks
 import { useState, useEffect } from "react";
+import { scrollElementHorizontally } from "../../utils/functions";
+
+//Icons
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 //Styles;
 import styles from "./Cast.module.css";
@@ -31,16 +35,24 @@ function Cast({ id }) {
 
    return (
       <section className={styles.CastContainer}>
-         <span className={styles.title}>Cast</span>
-         <div className={styles.castGrid}>
+         <div className={styles.heading}>
+            <span className={styles.title}>Cast</span>
+            <div className={styles.scrollButtons}>
+               <FaChevronLeft
+                  onClick={() => scrollElementHorizontally("castGrid", -100)}
+               />
+               <FaChevronRight
+                  onClick={() => scrollElementHorizontally("castGrid", 100)}
+               />
+            </div>
+         </div>
+         <div className={styles.castGrid} id="castGrid">
             {isLoading &&
                Array(10)
                   .fill(0)
                   .map((_, i) => (
                      <div className={styles.skeletonCastCard} key={i}>
-                        <Skeleton
-                           style={{ width: "60px", height: "60px" }}
-                        />
+                        <Skeleton style={{ width: "60px", height: "60px" }} />
                         <Skeleton
                            style={{
                               marginTop: "3px",
@@ -52,7 +64,7 @@ function Cast({ id }) {
                      </div>
                   ))}
             {castData.cast &&
-               castData.cast.slice(0, 10).map((profile) => (
+               castData.cast.slice(0, 15).map((profile) => (
                   <figure className={styles.castCard} key={profile.id}>
                      <div className={styles.castCardImgBox}>
                         <img

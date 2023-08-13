@@ -10,7 +10,8 @@
 }
 .searchBar svg {
    margin-right: 4px;
-   transition: all .2s ease;
+   transition: all 0.2s ease;
+   cursor: pointer;
 }
 .searchBar svg:hover {
    color: var(--main-color);

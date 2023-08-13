@@ -2,6 +2,20 @@
    margin-top: 0.8rem;
    position: relative;
 }
+.heading {
+   display: flex;
+   justify-content: space-between;
+   vertical-align: middle;
+}
+.scrollButtons {
+   display: flex;
+   gap: 5px;
+}
+.scrollButtons svg {
+   font-size: 1.2rem;
+   color: var(--main-color);
+   cursor: pointer;
+}
 .title {
    font-weight: 500;
    font-size: var(--text-large);
@@ -24,6 +38,7 @@
    overflow: hidden;
    object-fit: cover;
    position: relative;
+   border-radius: 8px;
 }
 .imgBox img {
    width: 100%;
@@ -42,7 +57,7 @@
    width: 100%;
    height: 100%;
    background-image: linear-gradient(90deg, rgba(34, 31, 31, 1), transparent);
-} */
+} 
 .shadow {
    position: absolute;
    top: 0;
@@ -55,7 +70,7 @@
       var(--bg-color) 100%
    );
    pointer-events: none;
-}
+}*/
 .playIcon {
    display: flex;
    height: 45px;
@@ -72,6 +87,7 @@
    transform: translate(-50%, -50%);
    z-index: 10;
    transition: 0.3s ease;
+   cursor: pointer;
 }
 .playIcon:is(:hover, :focus) {
    background-color: var(--main-color);

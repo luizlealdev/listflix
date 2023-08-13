@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { scrollElementHorizontally } from "../../utils/functions";
 
-//icon
-import { FaPlay } from "react-icons/fa6";
+//icons
+import { FaPlay, FaChevronRight, FaChevronLeft } from "react-icons/fa6";
+
 //Components
 import Window from "../layout/Window";
 
@@ -44,37 +46,47 @@ function Videos({ id }) {
    return (
       <>
          <section className={styles.videosContainer}>
-            <span className={styles.title}>Videos</span>
-            <div className={styles.videosGrid}>
+            <div className={styles.heading}>
+               <span className={styles.title}>Videos</span>
+               <div className={styles.scrollButtons}>
+                  <FaChevronLeft
+                     onClick={() => scrollElementHorizontally("videosGrid", -200)}
+                  />
+                  <FaChevronRight
+                     onClick={() => scrollElementHorizontally("videosGrid", 200)}
+                  />
+               </div>
+            </div>
+            <div className={styles.videosGrid} id="videosGrid">
                {videosData.results &&
                   videosData.results.map((video) => {
                      {
                         if (video.site !== "Vimeo") {
-                           return(
-                           <figure key={video.id} className={styles.video}>
-                              <div className={styles.imgBox}>
-                                 <img
-                                    src={`https://i.ytimg.com/vi_webp/${video.key}/hqdefault.webp`}
-                                    alt={`${video.name}`}
-                                 />
-                                 <span
-                                    className={styles.playIcon}
-                                    onClick={() =>
-                                       windowState(video.name, video.key)
-                                    }
-                                 >
-                                    <FaPlay />
-                                 </span>
-                              </div>
-                              <figcaption className={styles.videoTitle}>
-                                 {video.name}
-                              </figcaption>
-                           </figure>)
+                           return (
+                              <figure key={video.id} className={styles.video}>
+                                 <div className={styles.imgBox}>
+                                    <img
+                                       src={`https://i.ytimg.com/vi_webp/${video.key}/hqdefault.webp`}
+                                       alt={`${video.name}`}
+                                    />
+                                    <span
+                                       className={styles.playIcon}
+                                       onClick={() =>
+                                          windowState(video.name, video.key)
+                                       }
+                                    >
+                                       <FaPlay />
+                                    </span>
+                                 </div>
+                                 <figcaption className={styles.videoTitle}>
+                                    {video.name}
+                                 </figcaption>
+                              </figure>
+                           );
                         }
                      }
                   })}
             </div>
-            <span className={styles.shadow}></span>
          </section>
          {showWindow && (
             <Window

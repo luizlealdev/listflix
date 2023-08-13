@@ -1,5 +1,8 @@
+.inforsContainer {
+   margin-top: 1.3rem;
+}
 .grid {
-   margin-top: 0.5rem;
+   margin-top: 0.6rem;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
    row-gap: 1rem;
@@ -15,4 +18,11 @@
 .title {
    font-weight: 500;
    font-size: var(--text-large);
+}
+.flexItems {
+   column-count: 2;
+   column-width: 1%;
+}
+.flexItems p {
+   margin-right: 3px;
 }

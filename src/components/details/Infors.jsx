@@ -1,7 +1,14 @@
 //Styles;
 import styles from "./Infors.module.css";
 
-function Infors({ releaseDate, runTime, genres, budget, revenue }) {
+function Infors({
+   releaseDate,
+   runTime,
+   genres,
+   budget,
+   revenue,
+   productionCompanies,
+}) {
    return (
       <article className={styles.inforsContainer}>
          <span className={styles.title}>More information</span>
@@ -34,16 +41,26 @@ function Infors({ releaseDate, runTime, genres, budget, revenue }) {
                      : "No informations"}
                </p>
             </div>
+         </div>
+         <div className={styles.grid}>
             <div className={styles.section}>
                <span>Genres</span>
-               <p>
+               <p className={styles.flexItems}>
                   {genres.length > 0
-                     ? genres.map(
-                          (genre, i) =>
-                             `${genre.name}${
-                                i !== genres.length - 1 ? ", " : ""
-                             }`
-                       )
+                     ? genres.map((genre, i) => (
+                          <p key={genre.id}>{genre.name}</p>
+                       ))
+                     : "No informations"}
+               </p>
+            </div>
+            <div className={styles.section}>
+               <span>Production Companies</span>
+               <p className={styles.flexItems}>
+                  {productionCompanies.length > 0
+                     ? productionCompanies
+                     .slice(0,5).map((companie, i) => (
+                          <p key={companie.id}>{companie.name}</p>
+                       ))
                      : "No informations"}
                </p>
             </div>

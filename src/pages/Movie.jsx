@@ -52,29 +52,30 @@ function Movie() {
             </>
          )}
          {Object.values(movieData).length > 0 && (
-            <>
-               <Banner
-                  imageId={movieData.backdrop_path}
-                  title={movieData.title}
-                  overview={movieData.overview}
-                  year={movieData.release_date.slice(0, 4)}
-                  voteAverage={
-                     movieData.vote_average.toString().length > 3
-                        ? movieData.vote_average.toString().slice(0, 3)
-                        : movieData.vote_average.toString()
-                  }
-               />
-               <Infors
-                  releaseDate={movieData.release_date}
-                  runTime={movieData.runtime}
-                  genres={movieData.genres}
-                  budget={movieData.budget}
-                  revenue={movieData.revenue}
-               />
-            </>
+            <Banner
+               imageId={movieData.backdrop_path}
+               title={movieData.title}
+               overview={movieData.overview}
+               year={movieData.release_date.slice(0, 4)}
+               voteAverage={
+                  movieData.vote_average.toString().length > 3
+                     ? movieData.vote_average.toString().slice(0, 3)
+                     : movieData.vote_average.toString()
+               }
+            />
+         )}
+         <Videos id={id} />
+         {Object.values(movieData).length > 0 && (
+            <Infors
+               releaseDate={movieData.release_date}
+               runTime={movieData.runtime}
+               genres={movieData.genres}
+               budget={movieData.budget}
+               revenue={movieData.revenue}
+               productionCompanies={movieData.production_companies}
+            />
          )}
          <Cast id={id} />
-         <Videos id={id} />
          <List
             title="Recommendations"
             fetchUrl={`https://api.themoviedb.org/3/movie/${id}/recommendations`}

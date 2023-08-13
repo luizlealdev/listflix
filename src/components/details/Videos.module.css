@@ -1,5 +1,5 @@
 .videosContainer {
-   margin-top: 0.8rem;
+   margin-top: 0.6rem;
    position: relative;
 }
 .heading {
@@ -9,12 +9,14 @@
 }
 .scrollButtons {
    display: flex;
-   gap: 5px;
 }
 .scrollButtons svg {
-   font-size: 1.2rem;
    color: var(--text-color);
    cursor: pointer;
+   padding: 0.2rem 0.4rem;border-radius: 4px;
+   transition: 0.3s ease;
+}.scrollButtons svg:hover {
+   background-color: var(--light-bg-color);
 }
 .title {
    font-weight: 500;
@@ -39,6 +41,7 @@
    object-fit: cover;
    position: relative;
    border-radius: 8px;
+   border: 2px solid var(--light-bg-color);
 }
 .imgBox img {
    width: 100%;

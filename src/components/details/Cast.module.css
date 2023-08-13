@@ -13,7 +13,7 @@
 }
 .scrollButtons svg {
    font-size: 1.2rem;
-   color: var(--main-color);
+   color: var(--text-color);
    cursor: pointer;
 }
 .title {

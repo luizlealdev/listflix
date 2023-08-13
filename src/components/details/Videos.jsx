@@ -50,10 +50,14 @@ function Videos({ id }) {
                <span className={styles.title}>Videos</span>
                <div className={styles.scrollButtons}>
                   <FaChevronLeft
-                     onClick={() => scrollElementHorizontally("videosGrid", -200)}
+                     onClick={() =>
+                        scrollElementHorizontally("videosGrid", -200)
+                     }
                   />
                   <FaChevronRight
-                     onClick={() => scrollElementHorizontally("videosGrid", 200)}
+                     onClick={() =>
+                        scrollElementHorizontally("videosGrid", 200)
+                     }
                   />
                </div>
             </div>
@@ -87,6 +91,9 @@ function Videos({ id }) {
                      }
                   })}
             </div>
+            {videosData.results && videosData.results.length <= 0 && (
+               <p>There is no videos</p>
+            )}
          </section>
          {showWindow && (
             <Window

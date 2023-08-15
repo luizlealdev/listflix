@@ -8,7 +8,7 @@ function Movies() {
             fetchUrl={`https://api.themoviedb.org/3/movie/popular`}
             textLink="View All"
             quantityItems={30}
-            reloadDocument={false}
+            reloadDocument={true}
          />
          <List
             title="Now Playing"

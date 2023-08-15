@@ -46,7 +46,7 @@ function List({
          <div className={styles.listHeading}>
             <div className={styles.listHeadingTitle}>
                <span className={styles.listHeadingFag}></span>
-               <h2 className={styles.listTitle}>{title}</h2>
+               <p className={styles.title}>{title}</p>
             </div>
             {textLink && (
                <Link to={linkPath} className={styles.pathLink}>

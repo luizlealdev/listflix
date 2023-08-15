@@ -2,7 +2,11 @@
    display: flex;
    flex-direction: column;
    gap: 10px;
-   margin-top: 0.7rem;
+   margin-top: 1.1rem;
+}
+.title {
+   font-weight: 500;
+   font-size: var(--text-large);
 }
 .review {
    width: 100%;
@@ -21,18 +25,20 @@
    display: flex;
    flex-direction: column;
 }
-.reviewAutorInfors h4 {
-   display: flex;
-   align-items: center;
-   vertical-align: middle;
-   gap: 6px;
-}
 .reviewAutorImg {
    width: 50px;
    height: 50px;
    border-radius: 50px;
    display: flex;
    position: relative;
+}
+.reviewAutorPrimaryInfors {
+   font-weight: 500;
+   font-size: 1.1rem;
+   display: flex;
+   align-items: center;
+   vertical-align: middle;
+   gap: 6px;
 }
 .reviewAutorInforsSecundary {
    font-size: var(--text-small);
@@ -60,17 +66,15 @@
    padding-right: 1rem;
    vertical-align: middle;
 }
-.reviewContentText {
-   color: var(--text-secundary-color);
-}
 .reviewShowBtn {
    text-decoration: underline;
    font-weight: 500;
    margin-left: 0.5rem;
    user-select: none;
+   font-weight: 500;
 }
 .reviewShowBtn:hover {
-   color: var(--text-secundary-color);
+   color: var(--main-color);
 }
 .skeletonFlex {
    display: flex;

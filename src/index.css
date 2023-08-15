@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-shadow: border-box;
-   text-size-adjust: none !important;
+   text-size-adjust: none;
    -webkit-text-size-adjust: none;
 }
 

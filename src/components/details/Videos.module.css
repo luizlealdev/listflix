@@ -13,9 +13,11 @@
 .scrollButtons svg {
    color: var(--text-color);
    cursor: pointer;
-   padding: 0.2rem 0.4rem;border-radius: 4px;
+   padding: 0.2rem 0.4rem;
+   border-radius: 4px;
    transition: 0.3s ease;
-}.scrollButtons svg:hover {
+}
+.scrollButtons svg:hover {
    background-color: var(--light-bg-color);
 }
 .title {
@@ -24,19 +26,19 @@
 }
 .videosGrid {
    display: flex;
-   gap: 5px;
+   gap: 10px;
    overflow-x: scroll;
    overflow-y: auto;
    white-space: nowrap;
-   padding: 0.8rem 0;
+   padding: 0.5rem 0 1.1rem 0;
 }
 .video {
    max-width: 220px;
    max-height: 140px;
 }
 .imgBox {
-   width: 220px;
-   height: 120px;
+   width: 225px;
+   height: 125px;
    overflow: hidden;
    object-fit: cover;
    position: relative;
@@ -46,7 +48,7 @@
 .imgBox img {
    width: 100%;
    position: absolute;
-   transform: translateY(-20px);
+   transform: translateY(-22px);
 }
 .videoTitle {
    overflow: hidden;

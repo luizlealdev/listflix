@@ -1,6 +1,10 @@
 .list {
    margin: 1.8rem 0 5.5rem 0;
 }
+.title {
+   font-weight: 500;
+   font-size: var(--text-large);
+}
 .listHeading {
    display: flex;
    justify-content: space-between;
@@ -23,7 +27,6 @@
    align-items: center;
    vertical-align: middle;
    color: var(--text-color);
-   font-weight: 600;
    transition: 0.2s ease;
    gap: 4px;
 }

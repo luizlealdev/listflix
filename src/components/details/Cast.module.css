@@ -30,7 +30,11 @@
    overflow-x: scroll;
    white-space: nowrap;
    padding: 0.8rem 0;
+   scrollbar-width: none; 
+   -ms-overflow-style: none; 
+   overflow: -moz-scrollbars-none;
 }
+
 .castCard {
    background: var(--light-bg-color);
    border: 2px solid var(--light-bg-color);

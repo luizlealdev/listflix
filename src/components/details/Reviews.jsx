@@ -8,13 +8,13 @@ import { FaStar } from "react-icons/fa";
 //Styles
 import styles from "./Reviews.module.css";
 
-function Reviews({ fetchUrl }) {
+function Reviews({ id, type }) {
    const [reviewsData, setReviewsData] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
    const [reviewsContent, setReviewsContent] = useState([]);
 
    useEffect(() => {
-      fetch(fetchUrl, {
+      fetch(`https://api.themoviedb.org/3/${type}/${id}/reviews`, {
          method: "GET",
          headers: {
             accept: "application/json",
@@ -49,13 +49,12 @@ function Reviews({ fetchUrl }) {
          : ((reviewContentText.innerText =
               reviewsContent[reviewsContentIndex].slice(0, 250) + "..."),
            (reviewShowBtn.innerText = "Show all"));
-
       reviewContentText.setAttribute("showall", !showAllState);
    };
 
    return (
       <section className={styles.reviewsContainer}>
-         <h3>Reviews</h3>
+         <p className={styles.title}>Reviews</p>
          {isLoading &&
             Array(3)
                .fill(0)
@@ -94,7 +93,7 @@ function Reviews({ fetchUrl }) {
                   </div>
                ))}
          {reviewsData &&
-            reviewsData.slice(0,3).map((review, i) => (
+            reviewsData.slice(0, 3).map((review, i) => (
                <div className={styles.review} key={review.id}>
                   <div className={styles.reviewAutorInforsContainer}>
                      <img
@@ -107,13 +106,15 @@ function Reviews({ fetchUrl }) {
                         alt={`${review.author} Image`}
                      />
                      <div className={styles.reviewAutorInfors}>
-                        <h4>
+                        <span className={styles.reviewAutorPrimaryInfors}>
                            {`Review by ${review.author}`}
                            <span className={styles.reviewAutorVote}>
                               <FaStar />
-                              {review.author_details.rating}
+                              {review.author_details.rating
+                                 ? review.author_details.rating
+                                 : "0"}
                            </span>
-                        </h4>
+                        </span>
                         <div className={styles.reviewAutorInforsSecundary}>
                            <span className={styles.reviewDateInfor}>
                               {`Writed by ${review.author} at

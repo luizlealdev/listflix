@@ -9,7 +9,7 @@ import Banner from "../components/items/Banner";
 import Infors from "../components/details/Infors";
 import Videos from "../components/details/Videos";
 import Cast from "../components/details/Cast";
-//import Reviews from "../components/details/Reviews";
+import Reviews from "../components/details/Reviews";
 import List from "../components/items/List";
 
 //Skeleton Loading components
@@ -76,6 +76,7 @@ function Movie() {
             />
          )}
          <Cast id={id} />
+         <Reviews id={id} type="movie" />
          <List
             title="Recommendations"
             fetchUrl={`https://api.themoviedb.org/3/movie/${id}/recommendations`}

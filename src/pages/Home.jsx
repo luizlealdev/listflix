@@ -3,6 +3,8 @@ import Banner from "../components/items/Banner";
 import List from "../components/items/List";
 
 function Home() {
+   document.title = "Home - ListFlix";
+
    return (
       <>
          <Banner fetchUrl="https://api.themoviedb.org/3/trending/all/day" />
@@ -12,7 +14,7 @@ function Home() {
             quantityItems={15}
             textLink="View All"
             linkPath="/movies"
-            reloadDocument={false}
+            reloadDocument={true}
          />
          <List
             title="Top Rated Movies"
@@ -20,7 +22,7 @@ function Home() {
             quantityItems={15}
             textLink="View All"
             linkPath="/movies"
-            reloadDocument={false}
+            reloadDocument={true}
          />
       </>
    );

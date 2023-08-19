@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-//Styles
-import styles from "./Movie.module.css";
-
 //Components
 import Banner from "../components/items/Banner";
 import Infors from "../components/details/Infors";

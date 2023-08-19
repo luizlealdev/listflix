@@ -8,28 +8,28 @@ function Movies() {
             fetchUrl={`https://api.themoviedb.org/3/movie/popular`}
             textLink="View All"
             quantityItems={30}
-            reloadDocument={false}
+            reloadDocument={true}
          />
          <List
             title="Now Playing"
             fetchUrl={`https://api.themoviedb.org/3/movie/now_playing`}
             textLink="View All"
             quantityItems={30}
-            reloadDocument={false}
+            reloadDocument={true}
          />
          <List
             title="Upcoming Movies"
             fetchUrl={`https://api.themoviedb.org/3/movie/upcoming`}
             textLink="View All"
             quantityItems={30}
-            reloadDocument={false}
+            reloadDocument={true}
          />
          <List
             title="Top Rated Movies"
             fetchUrl={`https://api.themoviedb.org/3/movie/top_rated`}
             textLink="View All"
             quantityItems={30}
-            reloadDocument={false}
+            reloadDocument={true}
          />
       </div>
    );

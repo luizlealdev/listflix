@@ -10,14 +10,14 @@ import Window from "../layout/Window";
 //Styles
 import styles from "./Videos.module.css";
 
-function Videos({ id }) {
+function Videos({ id, type}) {
    const [videosData, setVideosData] = useState({});
    const [isLoading, setIsLoading] = useState(true);
    const [showWindow, setShowWindow] = useState(false);
    const [videoInfo, setVideoInfo] = useState({});
 
    useEffect(() => {
-      fetch(`https://api.themoviedb.org/3/movie/${id}/videos`, {
+      fetch(`https://api.themoviedb.org/3/${type}/${id}/videos`, {
          method: "GET",
          headers: {
             accept: "application/json",

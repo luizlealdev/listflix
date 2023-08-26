@@ -43,7 +43,7 @@
    background-image: linear-gradient(
       90deg,
       var(--bg-color),
-      rgba(34, 31, 31, 0.8),
+      rgba(16, 15, 18, 0.8),
       transparent
    );
    top: 0;

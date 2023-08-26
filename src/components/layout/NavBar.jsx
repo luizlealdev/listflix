@@ -4,7 +4,6 @@ import { FaRegBell } from "react-icons/fa6";
 //Components
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
-import UserPic from "../../assets/img/user-picture.jpg";
 
 //Styles
 import styles from "./NavBar.module.css";
@@ -20,7 +19,6 @@ function NavBar() {
                inputName="q"
             />
             <FaRegBell />
-            <img className={styles.userPicture} src={UserPic} alt="User" />
          </div>
       </header>
    );

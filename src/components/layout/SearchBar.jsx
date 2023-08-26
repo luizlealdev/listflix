@@ -6,7 +6,7 @@ import styles from "./SearchBar.module.css";
 
 function SearchBar({ placeholder, action, inputName }) {
    const submitForm = () => {
-      const searchBar = document.querySelector("form")
+      const searchBar = document.querySelector("form");
       searchBar.submit();
    };
 

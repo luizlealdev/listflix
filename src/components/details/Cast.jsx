@@ -11,12 +11,12 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 //Styles;
 import styles from "./Cast.module.css";
 
-function Cast({ id }) {
+function Cast({ id, type}) {
    const [castData, setCastData] = useState({});
    const [isLoading, setIsLoading] = useState(true);
 
    useEffect(() => {
-      fetch(`https://api.themoviedb.org/3/movie/${id}/credits`, {
+      fetch(`https://api.themoviedb.org/3/${type}/${id}/credits`, {
          method: "GET",
          headers: {
             accept: "application/json",

@@ -1,12 +1,12 @@
 .searchBar {
-   padding: 0.4rem 0.5rem;
-   background: #343434;
+   padding: 0.4rem 0.6rem;
+   border: 2px solid var(--light-bg-color);
    justify-content: space-between;
    /* max-width: 200px; */
    display: flex;
    align-items: center;
    vertical-align: middle;
-   border-radius: 30px;
+   border-radius: 15px;
 }
 .searchBar svg {
    margin-right: 4px;

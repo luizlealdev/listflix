@@ -4,7 +4,7 @@ function Series() {
    return (
       <div>
          <List
-            title="Popular Movies"
+            title="Popular Series"
             fetchUrl={`https://api.themoviedb.org/3/tv/popular`}
             textLink="View All"
             quantityItems={30}

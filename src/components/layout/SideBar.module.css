@@ -4,10 +4,11 @@
    left: 0;
    width: 14rem;
    height: 100vh;
-   background-color: var(--light-bg-color);
+   background-color: var(--bg-color);
    padding: 1.2rem;
    font-weight: 500;
    z-index: 5;
+   border-right: 2px solid var(--light-bg-color);
 }
 .textGuia {
    font-size: var(--text-small);
@@ -18,6 +19,7 @@
 .configItems {
    display: flex;
    flex-direction: column;
+   position: relative;
 }
 .navItem,
 .configItem {

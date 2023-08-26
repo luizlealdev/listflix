@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 //Components
 import Banner from "../components/items/Banner";
-import Infors from "../components/details/Infors";
+import Infors from "../components/details/movies/Infors";
 import Videos from "../components/details/Videos";
 import Cast from "../components/details/Cast";
 import Reviews from "../components/details/Reviews";
@@ -11,7 +11,7 @@ import List from "../components/items/List";
 
 //Skeleton Loading components
 import { BannerSkeleton } from "../components/items/BannerSkeleton";
-import { InforsSkeleton } from "../components/details/InforsSkeleton";
+import { InforsSkeleton } from "../components/details/movies/InforsSkeleton";
 
 function Movie() {
    const { name, id } = useParams();
@@ -61,7 +61,7 @@ function Movie() {
                }
             />
          )}
-         <Videos id={id} />
+         <Videos id={id} type="movie" />
          {Object.values(movieData).length > 0 && (
             <Infors
                releaseDate={movieData.release_date}
@@ -72,7 +72,7 @@ function Movie() {
                productionCompanies={movieData.production_companies}
             />
          )}
-         <Cast id={id} />
+         <Cast id={id} type="movie"/>
          <Reviews id={id} type="movie" />
          <List
             title="Recommendations"

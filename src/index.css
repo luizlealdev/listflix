@@ -21,8 +21,8 @@ html::-webkit-scrollbar-thumb {
    --main-color: #e50914;
    --text-color: #fff;
    --text-secundary-color: #bababa;
-   --bg-color: #221f1f;
-   --light-bg-color: #252525;
+   --bg-color: #100f12;
+   --light-bg-color: #18181A;
 
    /* Text sizes */
    --text-small: 0.8rem;
@@ -44,7 +44,7 @@ a {
 }
 
 img:not(#playIcon) {
-   background-color: #313131;
+   background-color: var(--light-bg-color);
 }
 
 ol,

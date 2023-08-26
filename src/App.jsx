@@ -19,7 +19,7 @@ function App() {
       <Router>
          <NavBar />
          <SideBar />
-         <SkeletonTheme baseColor="#313131" highlightColor="#525252">
+         <SkeletonTheme baseColor="#18181A" highlightColor="#222224">
             <Container>
                <Routes>
                   <Route exact path="/" element={<Home />} />
@@ -28,6 +28,7 @@ function App() {
                   <Route path="/series/" element={<Series />} />
                   <Route path="/serie/:name/:id" element={<Serie />} />
                   <Route path="/search" element={<Search />} />
+                  <Route path="/categories" element={<Movies />} />
                </Routes>
             </Container>
          </SkeletonTheme>

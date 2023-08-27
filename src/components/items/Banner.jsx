@@ -69,7 +69,7 @@ function Banner({
                      <p>{`(${year})`}</p>
                   </div>
                   <h1>{title}</h1>
-                  <p>
+                  <p className={styles.overview}>
                      {overview && overview.length >= 200
                         ? `${overview.slice(0, 200)}...`
                         : overview}

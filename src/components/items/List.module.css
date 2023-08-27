@@ -43,3 +43,22 @@
    row-gap: 50px;
    column-gap: 13px !important;
 }
+
+@media (max-width: 768px) {
+  .list {
+    margin: 3rem 0;
+  }
+   .listGrid {
+      column-gap: none;
+      display: flex;
+      flex-direction: row;
+      grid-template-columns: none;
+      row-gap: 0;
+      column-gap: 0;
+      gap: 15px;
+      overflow-x: scroll;
+      white-space: nowrap;
+      height: 230px;
+      padding-bottom: 1rem;
+   }
+}

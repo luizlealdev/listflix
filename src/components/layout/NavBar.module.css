@@ -1,27 +1,61 @@
 .navBar {
-   position: fixed;
-   max-width: 97vw;
-   width: 100%;
-   height: 60px;
-   background: var(--bg-color);
-   display: flex;
-   align-items: center;
-   vertical-align: middle;
-   justify-content: space-between;
-   padding: 0 1.2rem;
-   z-index: 10;
-   border-bottom: 2px solid var(--light-bg-color);
+  position: fixed;
+  max-width: 97vw;
+  width: 100%;
+  height: 60px;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: space-between;
+  padding: 0 1.2rem;
+  z-index: 10;
+  border-bottom: 2px solid var(--light-bg-color);
 }
+
 .items {
-   display: flex;
-   align-items: center;
-   vertical-align: middle;
-   gap: 10px;
-   margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  gap: 10px;
+  margin-right: 1rem;
 }
+
 .items svg {
-   font-size: var(--text-large);
+  font-size: var(--text-large);
 }
+
 .userPicture {
-   width: 28px;
+  width: 28px;
+}
+
+.menuIcon {
+  display: none;
+  cursor: pointer;
+  padding: 0.8rem;
+}
+
+@media (max-width: 768px) {
+
+  form,
+  .bellIcon {
+    display: none;
+  }
+  
+  .navBar {
+    height: 75px;
+  }
+  
+  .searchBar {
+    display: none;
+  }
+  
+  .menuIcon {
+    display: flex;
+  }
+  
+  .items svg {
+    font-size: 1.6rem;
+    margin-right: 4px;
+  }
 }

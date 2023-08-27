@@ -83,3 +83,8 @@
    pointer-events: none;
 }
  */
+@media (max-width: 768px) {
+  .scrollButtons {
+    display: none;
+  }
+}

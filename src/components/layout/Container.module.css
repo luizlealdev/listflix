@@ -43,3 +43,10 @@
       width: calc(100% - 14.4rem);
    }
 }
+
+@media (max-width: 768px) {
+   .container {
+      left: 0;
+      width: 100%;
+   }
+}

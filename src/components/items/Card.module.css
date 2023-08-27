@@ -56,3 +56,12 @@
    transition: 0.35s ease;
    pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  .card {
+    width: 140px;
+  }
+  .cardTitle {
+    width: 140px !important;
+  }
+}

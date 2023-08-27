@@ -1,5 +1,5 @@
 //Icon
-import { FaRegBell } from "react-icons/fa6";
+import { FaRegBell, FaBars } from "react-icons/fa6";
 
 //Components
 import Logo from "./Logo";
@@ -18,7 +18,8 @@ function NavBar() {
                placeholder="Search for Movie or Series..."
                inputName="q"
             />
-            <FaRegBell />
+            <FaRegBell className={styles.bellIcon} />
+            <FaBars className={styles.menuIcon}/>
          </div>
       </header>
    );

@@ -97,3 +97,9 @@
 .playIcon:is(:hover, :focus) {
    background-color: var(--main-color);
 }
+
+@media (max-width: 768px) {
+  .scrollButtons {
+    display: none;
+  }
+}

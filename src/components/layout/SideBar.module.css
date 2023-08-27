@@ -86,3 +86,8 @@
       width: 12rem;
    }
 }
+@media (max-width: 768px) {
+   .SideBarContainer {
+      display: none;
+   }
+}

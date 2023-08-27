@@ -67,17 +67,17 @@
    vertical-align: middle;
 }
 .reviewShowBtn {
-   text-decoration: underline;
    font-weight: 500;
    margin-left: 0.5rem;
    user-select: none;
-   font-weight: 500;
+   font-weight: 600;
+   cursor: pointer;
 }
 .reviewShowBtn:hover {
-   color: var(--main-color);
+   text-decoration: underline;
 }
 .skeletonFlex {
    display: flex;
    flex-direction: row;
-   position: rela;
+   position: relative;
 }

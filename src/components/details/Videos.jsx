@@ -10,7 +10,7 @@ import Window from "../layout/Window";
 //Styles
 import styles from "./Videos.module.css";
 
-function Videos({ id, type}) {
+function Videos({ id, type }) {
    const [videosData, setVideosData] = useState({});
    const [isLoading, setIsLoading] = useState(true);
    const [showWindow, setShowWindow] = useState(false);
@@ -48,18 +48,20 @@ function Videos({ id, type}) {
          <section className={styles.videosContainer}>
             <div className={styles.heading}>
                <span className={styles.title}>Videos</span>
-               <div className={styles.scrollButtons}>
-                  <FaChevronLeft
-                     onClick={() =>
-                        scrollElementHorizontally("videosGrid", -200)
-                     }
-                  />
-                  <FaChevronRight
-                     onClick={() =>
-                        scrollElementHorizontally("videosGrid", 200)
-                     }
-                  />
-               </div>
+               {videosData.results && videosData.results.length > 5 && (
+                  <div className={styles.scrollButtons}>
+                     <FaChevronLeft
+                        onClick={() =>
+                           scrollElementHorizontally("videosGrid", -200)
+                        }
+                     />
+                     <FaChevronRight
+                        onClick={() =>
+                           scrollElementHorizontally("videosGrid", 200)
+                        }
+                     />
+                  </div>
+               )}
             </div>
             <div className={styles.videosGrid} id="videosGrid">
                {videosData.results &&

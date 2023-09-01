@@ -88,4 +88,7 @@
   .bannerInfors h1 {
     font-size: 1.9rem;
   }
+  .shadow {
+    width: 50%;
+  }
 }

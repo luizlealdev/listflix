@@ -33,15 +33,16 @@ function Banner({
                const result = data.results ? data.results[0] : data;
                setBannerData(result);
                setIsLoading(false);
+               console.log(result.first_air_date)
             })
             .catch((err) => console.log(err));
       }
    }, [fetchUrl]);
 
    const imageId = bannerData?.backdrop_path || initialImageId;
-   const title = bannerData?.title || initialTitle;
+   const title = bannerData?.title || bannerData?.name || initialTitle;
    const overview = bannerData.overview || initialOverview;
-   const year = bannerData?.release_date?.slice(0, 4) || initialYear;
+   const year = bannerData?.release_date?.slice(0, 4) || bannerData.first_air_date?.slice(0,4) || initialYear;
    const voteAverage = bannerData?.vote_average || initialVoteAverage;
 
    return (

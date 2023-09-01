@@ -3,8 +3,6 @@
    top: 60px;
    left: 16.4rem;
    width: calc(100% - 16.4rem);
-   height: 100vh;
-   overflow-y: scroll;
 }
 
 .spacing {

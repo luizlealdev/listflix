@@ -9,7 +9,7 @@
   vertical-align: middle;
   justify-content: space-between;
   padding: 0 1.2rem;
-  z-index: 10;
+  z-index: 20;
   border-bottom: 2px solid var(--light-bg-color);
 }
 
@@ -36,14 +36,13 @@
 }
 
 @media (max-width: 768px) {
-
   form,
   .bellIcon {
     display: none;
   }
   
   .navBar {
-    height: 75px;
+    height: 70px;
   }
   
   .searchBar {

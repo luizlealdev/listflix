@@ -42,6 +42,15 @@
 .player {
    background-color: #313131;
    width: 100%;
-   height: 90% !important;
+   height: 90%;
    margin-top: 0.2rem;
+}
+@media (max-width: 768px) {
+  .window {
+    width: 80vw;
+    height: 12rem;
+  }
+  .player {
+    height: 85%;
+  }
 }

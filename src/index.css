@@ -5,17 +5,6 @@
    text-size-adjust: none;
    -webkit-text-size-adjust: none;
 }
-
-/* html::-webkit-scrollbar {
-   width: 0.5rem;
-   background: #313131;
-}
-
-html::-webkit-scrollbar-thumb {
-   background: var(--main-color);
-   border-radius: 10px;
-} */
-
 :root {
    /* Colors */
    --main-color: #e50914;
@@ -30,7 +19,16 @@ html::-webkit-scrollbar-thumb {
    --text-large: 1.2rem;
    --text-ultra: 1.8rem;
 }
-
+html::-webkit-scrollbar {
+   width: 0.5rem;
+   background: var(--light-bg-color);
+}
+html::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-track
+{
+   background: var(--main-color);
+   border-radius: 10px;
+}
 body,
 html {
    font-family: "Poppins", sans-serif;
@@ -67,4 +65,29 @@ strong {
 }
 strong svg {
    margin-right: 4px;
+}
+.title {
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+   vertical-align: middle;
+}
+.listHeadingFag {
+   width: 7px;
+   height: 100%;
+   background: var(--main-color);
+   border-radius: 8px;
+   display: flex;
+   color: var(--main-color);
+   pointer-events: none;
+}
+.detailsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hideScrollBar::-webkit-scrollbar,
+.hideScrollBar::-webkit-scrollbar-thumb,
+.hideScrollBar::-webkit-scrollbar-track{
+   background: transparent;
 }

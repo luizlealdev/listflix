@@ -18,7 +18,6 @@ function App() {
    return (
       <Router>
          <NavBar />
-         <SideBar />
          <SkeletonTheme baseColor="#18181A" highlightColor="#222224">
             <Container>
                <Routes>
@@ -32,6 +31,7 @@ function App() {
                </Routes>
             </Container>
          </SkeletonTheme>
+         <SideBar/>
       </Router>
    );
 }

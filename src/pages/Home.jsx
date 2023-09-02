@@ -24,6 +24,14 @@ function Home() {
         linkPath="/movies"
         reloadDocument={true}
       />
+      <List
+        title="Top Rated series"
+        fetchUrl="https://api.themoviedb.org/3/tv/top_rated"
+        quantityItems={15}
+        textLink="View All"
+        linkPath="/series"
+        reloadDocument={true}
+      />
     </>
   );
 }

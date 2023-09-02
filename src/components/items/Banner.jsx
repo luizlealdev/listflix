@@ -54,7 +54,7 @@ function Banner({
                   className={styles.bannerImg}
                   src={
                      imageId != null
-                        ? `https://image.tmdb.org/t/p/original${imageId}`
+                        ? `https://image.tmdb.org/t/p/w500${imageId}`
                         : "https://i.ibb.co/Z1vrqbj/no-image-banner.jpg"
                   }
                   alt={`${title} Banner`}

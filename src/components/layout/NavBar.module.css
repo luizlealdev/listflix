@@ -1,8 +1,9 @@
 .navBar {
   position: fixed;
+  top: 0;
   max-width: 97vw;
   width: 100%;
-  height: 60px;
+  height: 55px;
   background: var(--bg-color);
   display: flex;
   align-items: center;
@@ -29,10 +30,10 @@
   width: 28px;
 }
 
-.menuIcon {
+.searchIcon {
   display: none;
   cursor: pointer;
-  padding: 0.8rem;
+  padding: 0.6rem;
 }
 
 @media (max-width: 768px) {
@@ -49,7 +50,7 @@
     display: none;
   }
   
-  .menuIcon {
+  .searchIcon {
     display: flex;
   }
   

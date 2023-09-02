@@ -1,5 +1,6 @@
 //Icon
-import { FaRegBell, FaBars } from "react-icons/fa6";
+import { FaRegBell } from "react-icons/fa6";
+import { FiSearch } from "react-icons/fi";
 
 //Components
 import Logo from "./Logo";
@@ -19,7 +20,7 @@ function NavBar() {
                inputName="q"
             />
             <FaRegBell className={styles.bellIcon} />
-            <FaBars className={styles.menuIcon}/>
+            <FiSearch className={styles.searchIcon}/>
          </div>
       </header>
    );

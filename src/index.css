@@ -84,7 +84,7 @@ strong svg {
 .detailsContent {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.3rem;
 }
 .hideScrollBar::-webkit-scrollbar,
 .hideScrollBar::-webkit-scrollbar-thumb,

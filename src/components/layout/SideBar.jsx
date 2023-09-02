@@ -42,102 +42,38 @@ function SideBar() {
    }, []);
 
    return (
-      <div className={styles.SideBarContainer}>
-         <p className={styles.textGuia}>Navigation</p>
-         <nav>
-            <ul className={styles.navItems}>
-               <li className={styles.navItem}>
-                  <Link to="/" className={styles.navLink}>
-                     <FaHouse />
-                     Home
-                  </Link>
-               </li>
-               <li className={styles.navItem}>
-                  <Link to="/movies" className={styles.navLink}>
-                     <FaVideo />
-                     Movies
-                  </Link>
-               </li>
-               <li className={styles.navItem}>
-                  <Link to="/series" className={styles.navLink}>
-                     <BiSolidMovie />
-                     Series
-                  </Link>
-               </li>
-               <li className={styles.navItem}>
-                  <span
-                     onClick={handleGenreMenu}
-                     className={`${styles.navLink} ${
-                        genreMenuState ? styles.genreMenuOpened : ""
-                     }`}
-                  >
-                     <FaRocket />
-                     Categories
-                     <FaChevronDown
-                        className={`${styles.genreMenuIcon} ${
-                           genreMenuState ? styles.opened : ""
-                        }`}
-                     />
-                  </span>
-                  <ul className={styles.genreItems}>
-                     {genreData.genres &&
-                        genreData.genres.map((genre) => (
-                           <li key={genre.id}>
-                              <Link to={`/movies/genre/${genre.id}`}>
-                                 {genre.name}
-                              </Link>
-                           </li>
-                        ))}
-                  </ul>
-               </li>
-            </ul>
-         </nav>
-         <div className={styles.textGuia}>Configurations</div>
-         <div className={styles.selectLanguageContainer}>
-            <ul className={styles.configItems}>
-               <li className={styles.configItem}>
-                  <span
-                     onClick={handleMenuLanguage}
-                     className={`${styles.configLink} ${
-                        languageMenuState ? styles.languageMenuOpened : ""
-                     }`}
-                  >
-                     <FaLanguage />
-                     Language
-                     <FaChevronDown
-                        className={`${styles.languageMenuIcon} ${
-                           languageMenuState ? styles.opened : ""
-                        }`}
-                     />
-                  </span>
-                  <ul className={styles.languageItems}>
-                     <li className={styles.languageItem}>
-                        <img
-                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/44px-Flag_of_the_United_States.svg.png"
-                           alt="United States Flag"
-                           className={styles.languageFlagIcon}
-                        />
-                        English-US
-                     </li>
-                     <li className={styles.languageItem}>
-                        <img
-                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/44px-Flag_of_Brazil.svg.png"
-                           alt="Brazil Flag"
-                           className={styles.languageFlagIcon}
-                        />
-                        Português-BR
-                     </li>
-                     <li className={styles.languageItem}>
-                        <img
-                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/44px-Flag_of_Spain.svg.png"
-                           alt="Spain Flag"
-                           className={styles.languageFlagIcon}
-                        />
-                        Español-ES
-                     </li>
-                  </ul>
-               </li>
-            </ul>
+      <div className={styles.sideBarContainer}>
+         <div className={styles.sideBarContent}>
+            <p className={styles.textGuia}>Navigation</p>
+            <nav>
+               <ul className={styles.navItems}>
+                  <li className={styles.navItem}>
+                     <Link to="/" className={styles.navLink}>
+                        <FaHouse />
+                        Home
+                     </Link>
+                  </li>
+                  <li className={styles.navItem}>
+                     <Link to="/movies" className={styles.navLink}>
+                        <FaVideo />
+                        Movies
+                     </Link>
+                  </li>
+                  <li className={styles.navItem}>
+                     <Link to="/series" className={styles.navLink}>
+                        <BiSolidMovie />
+                        Series
+                     </Link>
+                  </li>
+                  <li className={styles.navItem}>
+                     <Link to="/categories" className={styles.navLink}>
+                        <FaRocket />
+                        Categories
+                     </Link>
+                  </li>
+               </ul>
+            </nav>
+            <div className={styles.textGuia}>Configurations</div>
          </div>
       </div>
    );

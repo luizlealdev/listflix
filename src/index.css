@@ -91,3 +91,6 @@ strong svg {
 .hideScrollBar::-webkit-scrollbar-track{
    background: transparent;
 }
+.searchBarShown {
+   display: flex;
+}

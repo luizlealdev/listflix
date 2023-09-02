@@ -58,12 +58,13 @@
       width: 100%;
       height: 35px;
       border-right: none;
+      z-index: 15;
    }
    
    .sideBarContent {
       position: fixed;
       width: 92vw;
-      height: 35px;
+      height: 30px;
       bottom: 0;
       padding:0.8rem 1.2rem;
       background: var(--bg-color);

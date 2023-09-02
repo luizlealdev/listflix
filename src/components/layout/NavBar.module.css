@@ -1,61 +1,71 @@
 .navBar {
-  position: fixed;
-  top: 0;
-  max-width: 97vw;
-  width: 100%;
-  height: 55px;
-  background: var(--bg-color);
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-  justify-content: space-between;
-  padding: 0 1.2rem;
-  z-index: 20;
-  border-bottom: 2px solid var(--light-bg-color);
+   position: fixed;
+   top: 0;
+   max-width: 97vw;
+   width: 100%;
+   height: 55px;
+   background: var(--bg-color);
+   display: flex;
+   align-items: center;
+   vertical-align: middle;
+   justify-content: space-between;
+   padding: 0 1.2rem;
+   z-index: 15;
+   border-bottom: 2px solid var(--light-bg-color);
 }
 
 .items {
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
-  gap: 10px;
-  margin-right: 1rem;
+   display: flex;
+   align-items: center;
+   vertical-align: middle;
+   gap: 10px;
+   margin-right: 1rem;
 }
 
 .items svg {
-  font-size: var(--text-large);
+   font-size: var(--text-large);
 }
 
 .userPicture {
-  width: 28px;
+   width: 28px;
 }
 
 .searchIcon {
-  display: none;
-  cursor: pointer;
-  padding: 0.6rem;
+   display: none;
+   cursor: pointer;
+   padding: 0.6rem;
 }
 
 @media (max-width: 768px) {
-  form,
-  .bellIcon {
-    display: none;
-  }
-  
-  .navBar {
-    height: 70px;
-  }
-  
-  .searchBar {
-    display: none;
-  }
-  
-  .searchIcon {
-    display: flex;
-  }
-  
-  .items svg {
-    font-size: 1.6rem;
-    margin-right: 4px;
-  }
+
+   form,
+   .bellIcon {
+      display: none;
+   }
+   
+   .navBar {
+      height: 70px;
+      position: fixed;
+   }
+   
+   .searchBar {
+      display: none;
+      width: 95vw;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: 0;
+      background: var(--bg-color);
+      border-radius: 0;
+      border: none;
+   }
+   
+   .searchIcon {
+      display: flex;
+   }
+   
+   .items svg {
+      font-size: 1.6rem;
+      margin-right: 4px;
+   }
 }

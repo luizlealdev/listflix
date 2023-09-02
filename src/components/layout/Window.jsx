@@ -4,6 +4,8 @@ import { FaXmark } from "react-icons/fa6";
 import styles from "./Window.module.css";
 
 function Window({ title, urlId, closeFunc }) {
+   document.documentElement.style.overflow = "hidden";
+
    return (
       <>
          <div className={styles.window}>

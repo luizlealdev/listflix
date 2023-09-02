@@ -1,6 +1,7 @@
 .inforsContainer {
    margin-top: 1.3rem;
 }
+
 .grid {
    margin-top: 0.6rem;
    display: grid;
@@ -8,30 +9,36 @@
    row-gap: 1rem;
    column-gap: calc(auto + 1rem);
 }
+
 .section {
    display: flex;
    flex-direction: column;
 }
+
 .section span {
    color: var(--text-secundary-color);
 }
+
 .title {
    font-weight: 500;
    font-size: var(--text-large);
 }
+
 .flexItems {
    column-count: 2;
    column-width: 1%;
 }
+
 .flexItems p {
    margin-right: 3px;
 }
+
 @media (max-width: 768px) {
- .grid:nth-last-child(1) {
-   display: flex;
-   flex-direction: column;
-   grid-template-columns: none;
-   row-gap: none;
-   column-gap: none;
- }
+   .grid:nth-last-child(1) {
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: none;
+      row-gap: none;
+      column-gap: none;
+   }
 }

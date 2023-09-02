@@ -10,6 +10,10 @@ import SearchBar from "./SearchBar";
 import styles from "./NavBar.module.css";
 
 function NavBar() {
+   const toggleSearchBar = () => {
+      document.getElementById("searchBar").classList.toggle("searchBarShown");
+   }
+   
    return (
       <header className={styles.navBar}>
          <Logo />
@@ -18,9 +22,10 @@ function NavBar() {
                action="/search"
                placeholder="Search for Movie or Series..."
                inputName="q"
+               closeFunc={toggleSearchBar}
             />
             <FaRegBell className={styles.bellIcon} />
-            <FiSearch className={styles.searchIcon}/>
+            <FiSearch className={styles.searchIcon} onClick={toggleSearchBar}/>
          </div>
       </header>
    );

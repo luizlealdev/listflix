@@ -11,9 +11,7 @@ function Home() {
       <List
         title="Trending"
         fetchUrl="https://api.themoviedb.org/3/trending/all/day"
-        quantityItems={15}
-        textLink="View All"
-        linkPath="/movies"
+        quantityItems={20}
         reloadDocument={true}
       />
       <List
@@ -21,7 +19,7 @@ function Home() {
         fetchUrl="https://api.themoviedb.org/3/movie/top_rated"
         quantityItems={15}
         textLink="View All"
-        linkPath="/movies"
+        linkPath="/movies/top_rated"
         reloadDocument={true}
       />
       <List
@@ -29,7 +27,7 @@ function Home() {
         fetchUrl="https://api.themoviedb.org/3/tv/top_rated"
         quantityItems={15}
         textLink="View All"
-        linkPath="/series"
+        linkPath="/series/top_rated"
         reloadDocument={true}
       />
     </>

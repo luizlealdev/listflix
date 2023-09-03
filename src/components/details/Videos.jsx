@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { scrollElementHorizontally } from "../../utils/functions";
 
+//Skeleton
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 //icons
 import { FaPlay, FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
@@ -66,6 +70,17 @@ function Videos({ id, type }) {
                      />
                   </div>
                )}
+            </div>
+            <div className={styles.videosGrid}>
+               {isLoading &&
+                  Array(15)
+                     .fill(0)
+                     .map((_, i) => (
+                        <div className={styles.video} key={i}>
+                           <Skeleton className={styles.imgBox} />
+                           <Skeleton className={styles.videoTitle} />
+                        </div>
+                     ))}
             </div>
             <div className={`${styles.videosGrid} hideScrollBar`} id="videosGrid">
                {videosData.results &&

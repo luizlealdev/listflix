@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import styles from "./Banner.module.css";
 
 //Skeleton loading
-import { BannerSkeleton } from "./BannerSkeleton";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 //Icon
 import { FaStar } from "react-icons/fa";
@@ -33,7 +34,6 @@ function Banner({
                const result = data.results ? data.results[0] : data;
                setBannerData(result);
                setIsLoading(false);
-               console.log(result.first_air_date)
             })
             .catch((err) => console.log(err));
       }
@@ -47,7 +47,7 @@ function Banner({
 
    return (
       <>
-         {fetchUrl !== undefined && isLoading && <BannerSkeleton />}
+         {fetchUrl !== undefined && isLoading && <Skeleton className={styles.bannerImg}/>}
          {title && (
             <figure className={styles.bannerContainer}>
                <img

@@ -1,11 +1,8 @@
-import { Link } from "react-router-dom";
-import { BiSolidMovie } from "react-icons/bi";
+import { Link, useLocation } from "react-router-dom";
+import { BiSolidMovie, BiSolidCategoryAlt} from "react-icons/bi";
 import {
    FaHouse,
-   FaVideo,
-   FaRocket,
-   FaChevronDown,
-   FaLanguage,
+   FaVideo
 } from "react-icons/fa6";
 
 //Hooks
@@ -18,6 +15,9 @@ function SideBar() {
    const [genreMenuState, setGenreMenuState] = useState(false);
    const [languageMenuState, setLanguageMenuState] = useState(false);
    const [genreData, setGenreData] = useState({});
+   
+   const activeRoute = useLocation();
+   const currentRoute = activeRoute.pathname;
 
    const handleGenreMenu = (e) => {
       setGenreMenuState((current) => !current);
@@ -48,26 +48,26 @@ function SideBar() {
             <nav>
                <ul className={styles.navItems}>
                   <li className={styles.navItem}>
-                     <Link to="/" className={styles.navLink}>
+                     <Link to="/" className={`${styles.navLink} ${currentRoute == "/" || currentRoute.includes('search') ? "selected" : ""}`}>
                         <FaHouse />
                         Home
                      </Link>
                   </li>
                   <li className={styles.navItem}>
-                     <Link to="/movies" className={styles.navLink}>
+                     <Link to="/movies" className={`${styles.navLink} ${currentRoute.includes('movie') ? "selected" : ""}`}>
                         <FaVideo />
                         Movies
                      </Link>
                   </li>
                   <li className={styles.navItem}>
-                     <Link to="/series" className={styles.navLink}>
+                     <Link to="/series" className={`${styles.navLink} ${currentRoute.includes('serie') ? "selected" : ""}`}>
                         <BiSolidMovie />
                         Series
                      </Link>
                   </li>
                   <li className={styles.navItem}>
-                     <Link to="/categories" className={styles.navLink}>
-                        <FaRocket />
+                     <Link to="/categories" className={`${styles.navLink} ${currentRoute.includes('categor') ? "selected" : ""}`}>
+                        <BiSolidCategoryAlt />
                         Categories
                      </Link>
                   </li>

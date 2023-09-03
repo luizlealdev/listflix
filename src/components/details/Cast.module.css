@@ -38,6 +38,9 @@
 .castCard {
    background: var(--light-bg-color);
    border: 2px solid var(--light-bg-color);
+}
+.castCardSkeleton,
+.castCard{
    width: 100px !important;
    height: 135px;
    border-radius: 8px;
@@ -54,7 +57,7 @@
    border-top-right-radius: 8px;
 }
 .castInfo {
-   width: 100%;
+   width: 100px;
    white-space: nowrap;
    padding: 0.1rem 0.2rem;
 }

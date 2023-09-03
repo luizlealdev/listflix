@@ -51,19 +51,12 @@ function Cast({ id, type }) {
       </div>
       <div className={`${styles.castGrid} hideScrollBar`} id="castGrid">
         {isLoading &&
-          Array(10)
+          Array(15)
             .fill(0)
             .map((_, i) => (
-              <div className={styles.skeletonCastCard} key={i}>
-                <Skeleton style={{ width: "60px", height: "60px" }} />
-                <Skeleton
-                  style={{
-                    marginTop: "3px",
-                    borderRadius: "8px",
-                    width: "100%",
-                    height: "13px",
-                  }}
-                />
+              <div className={styles.castCardSkeleton} key={i}>
+                <Skeleton className={styles.castCardImgBox} />
+                <Skeleton className={styles.castInfo} />
               </div>
             ))}
         {castData.cast &&

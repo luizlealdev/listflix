@@ -94,3 +94,6 @@ strong svg {
 .searchBarShown {
    display: flex;
 }
+.selected {
+   color: var(--main-color);
+}
